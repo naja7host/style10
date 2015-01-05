@@ -1,6 +1,8 @@
 # Click-Once directory
 cache/*
 update/*
+!cache/index.html
+!update/index.html
 notused/
 js/notused/
 css/notused/
