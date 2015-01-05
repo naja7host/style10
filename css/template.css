@@ -98,13 +98,8 @@ a.tumblr:hover {background: url("../images/social/grey/Tumblr.png") no-repeat sc
 a.rss {background: url("../images/social/colour/RSS.png") no-repeat scroll 0 0 transparent;}
 a.rss:hover {background: url("../images/social/grey/RSS.png") no-repeat scroll 0 0 transparent;}
 
-
-a.facebook , a.twitter ,a.youtube  ,a.googleplus ,a.flicker ,a.instagram, a.linkedin , a.github , a.pinterest , a.skype , a.vimeo , a.picasa , a.tumblr  , a.rss 
-{float: left;height: 24px;    text-indent: -9999px;    width: 24px;background-size: contain;}
-a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flicker:hover ,a.instagram:hover, a.linkedin:hover , 
-a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hover , a.tumblr:hover  , a.rss:hover
-{background-size: contain;}
-
+a.facebook , a.twitter ,a.youtube  ,a.googleplus ,a.flicker ,a.instagram, a.linkedin , a.github , a.pinterest , a.skype , a.vimeo , a.picasa , a.tumblr  , a.rss {float: left;height: 24px;    text-indent: -9999px;    width: 24px;background-size: contain;}
+a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flicker:hover ,a.instagram:hover, a.linkedin:hover , a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hover , a.tumblr:hover  , a.rss:hover{background-size: contain;}
 
 /*
 	======================================================================
@@ -133,6 +128,7 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 .nav-last .nav li:hover, .nav-last .nav li.sfHover, .nav-last .nav a:focus, .nav-last .nav a:hover, .nav-last .nav a:active {background: #4477cc;}
 
 /*** cat news border-bottom: 2px solid rgb(115, 51, 125); **/
+
 .cat {background-color: rgb(0, 136, 204);line-height: 135% !important;}
 .cat-head{height:1px;background-color: #000;}
 .cats , .cat-10{background: #73337D;}
@@ -167,6 +163,7 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 */
 
 /*** SLIDER ***/
+
 .home-featured {padding-bottom:10px;float: left;}
 .home-featured-right {padding-left: 0;padding-right: 0;}
 .slider-home {position: relative;width: 100%;height: 280px;z-index: 1;/*padding-right: 9px;padding-left: 0px;*/}
@@ -179,6 +176,7 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 .post-thumbnail {/*height: 100px;*/}
 
 /*** main page ***/ 
+
 .mudule-tile-search {background: url("../images/title_bg.png") no-repeat right #4477cc ;}
 .mudule-tile-search {color: #FFFFFF;width: 100%;font-size: 22px;}
 .mudule-tile-search:hover {}
@@ -193,7 +191,9 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 
 .title_box {text-shadow: 1px 1px 1px #333333;color: #FFFFFF;text-align: center;padding: 1px 0px 3px 0px;font-size: 22px;background: #4477cc;border-radius: 10px 10px 0px 0px;}
 .sidebar-content {border-left: 3px solid #4477cc;border-right: 3px solid #4477cc;border-bottom: 3px solid #4477cc;}
+
 /*** sidebar-wrapper ***/
+
 .sidebar-wrapper {background: none repeat scroll 0% 0% #FFF;    margin-bottom: 15px;    float: right;    width: 100%;    box-shadow: 0px 2px 5px -1px #D1D1D1;}
 .sidebar-wrapper h2 a {text-decoration: none;}
 .sidebar-wrapper h2, .sidebar-wrapper h3 , .sidebar-wrapper h2 a , .sidebar-wrapper h3 a {/*font: 400 17px/25px "Droid Arabic Kufi";*/}
@@ -259,7 +259,6 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 .module-posts-4 li .text  {display:block;	height: 125px;overflow: hidden;} 
 .module-posts-4 li .title {/*font: 400 13px/22px "Droid Arabic Kufi"*/;	height:45px;	overflow:hidden;	padding-right: 5px;}
 
-
 .module-posts-1, .module-posts-2, .module-posts-3,.module-posts-4 {background: #F8F8F8;}
 .module-posts-1 ul  ,.module-posts-2 ul  ,.module-posts-3 ul  ,.module-posts-4 ul   {}
 .module-posts-1 li , .module-posts-2 li , .module-posts-3 li , .module-posts-4 li {float: left;}
@@ -267,8 +266,6 @@ a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hov
 
 .module-more-post {border-top: 1px solid #eef1f5;    bottom: 0;    float: right;    padding: 8px 0;    text-align: center;    width: 100%;}
 .module-more-post:hover {background: none repeat scroll 0 0 #f5f8f9;}
-
-
 
 /*** Views ***/ 
 ul.views {color: #222222;/*font: 700 15px ;*/text-decoration: none;margin: 0;padding:0}
@@ -447,98 +444,40 @@ a:hover#bm-arrow-top {border-radius: 50px;background: url("../images/top-button.
 
 /* Landscape phone to portrait tablet */
     @media (max-width: 767px) { 
-		.main{width:100%;}
-		.content {
+		.main{/*width:100%;*/}
+		.content {/*
 		float: right;
 		margin: 0px;
 		position: relative;
-		width: 100%;
+		width: 100%;*/
 		}
-		.sidebar {
-		padding-right: 15px;
-		width: 100%;
-		}
-		.module-posts-2 li .thumbnail {
-		width: 100%;
-		height: 124px;
-		}
-		.module-posts-3 li .thumbnail {
-
-		width: 100%;
-		height: 179px;
-
-		}
-		.module-posts-1 li:first-child {
-
-		width: 100%;
-		}
-		.module-posts-1 li:first-child .thumbnail {
-			
-			height: 124px;
-		
-			}
-		.module-posts-1 li {
-
-		width: 100%;
-		}
-		.module-posts-3 li .text {
-		width: 100%;
-		}
-		.module-posts-4 li {
-
-		width: 100%;
-
-		}
-		.footer {
-
-		width: 100%;
-		}
+		.sidebar {padding-right: 15px;width: 100%;}
+		.module-posts-2 li .thumbnail {width: 100%;height: 124px;}
+		.module-posts-3 li .thumbnail {width: 100%;height: 179px;}
+		.module-posts-1 li:first-child {width: 100%;}
+		.module-posts-1 li:first-child .thumbnail {height: 124px;}
+		.module-posts-1 li {width: 100%;}
+		.module-posts-3 li .text {width: 100%;}
+		.module-posts-4 li {width: 100%;}
+		.footer {/*width: 100%;*/}
 	}
      
     /* Landscape phones and down */
     @media (max-width: 480px) { 
-		.main{width:100%;}
-		.content {
+		.main{/*width:100%;*/}
+		.content {/*
 		float: right;
 		margin: 0px;
 		position: relative;
-		width: 100%;
+		width: 100%;*/
 		}
-		.sidebar {
-		padding-right: 15px;
-		width: 100%;
-		}
-		.module-posts-2 li .thumbnail {
-		width: 100%;
-		height: 124px;
-		}
-		.module-posts-3 li .thumbnail {
-
-		width: 100%;
-
-		}
-		.module-posts-1 li:first-child {
-
-		width: 100%;
-		}
-		.module-posts-1 li {
-
-		width: 100%;
-		}
-		.module-posts-3 li .text {
-		width: 100%;
-		}
-		.module-posts-4 li {
-
-		width: 100%;
-
-		}
-		.search form {
-		
-		 margin-right: 0%; 
-		}
-		.footer {
-
-		width: 100%;
-		}
+		.sidebar {padding-right: 15px;width: 100%;}
+		.module-posts-2 li .thumbnail {width: 100%;height: 124px;}
+		.module-posts-3 li .thumbnail {width: 100%;}
+		.module-posts-1 li:first-child {width: 100%;}
+		.module-posts-1 li {width: 100%;}
+		.module-posts-3 li .text {width: 100%;}
+		.module-posts-4 li {width: 100%;}
+		.search form {margin-right: 0%;}
+		.footer {/*width: 100%;*/}
 	}
