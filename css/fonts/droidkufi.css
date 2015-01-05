@@ -1,0 +1,17 @@
+/*
+	======================================================================
+		MAIN PAGE
+		NAJA7HOST
+		BLUE STYLE
+	======================================================================
+*/
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+* { 
+	font-family: 'Droid Arabic Kufi', Arial ,Tahoma, sans-serif;
+	/*font-size: 14px;*/	
+}
+body {
+  font-family : 'Droid Arabic Kufi', Arial, sans-serif;
+  font-size: 16px;
+}

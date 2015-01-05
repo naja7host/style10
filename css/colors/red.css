@@ -1,0 +1,82 @@
+/*
+	======================================================================
+		NAJA7HOST
+		RED STYLE
+	======================================================================
+*/
+	
+body { background: #ca0002; }
+a {}
+a:hover , a:focus {}
+
+/*** Header ***/
+.nav-first-w {}
+.nav-last-w {}
+.module-posts-1 li .title a ,  .module-posts-2 li .title a  , .module-posts-3 li .title a {color:#ca0002}
+
+/* Navigation Links*/
+.nav-last {}
+.nav-last .nav li:first-child {background: none repeat scroll 0 0 #ca0002;}
+.nav-last .nav li:hover, .nav-last .nav li.sfHover, .nav-last .nav a:focus, .nav-last .nav a:hover, .nav-last .nav a:active {background: #ca0002;}
+
+/*** main Page ***/
+.mudule-tile-search {background: url("../../images/title_bg.png") no-repeat right #ca0002 ;}
+.mudule-tile-search1 span  {background: url("../../images/title_cat.png") no-repeat left #ca0002 ;border-bottom: 3px solid  #ca0002;}
+.mudule-tile-search2 {background: url('../../images/bg.png') #ca0002;border-bottom: 1px solid #e1e1e1;}
+
+.module-more-post a:hover {color: #ca0002;}
+.mudule-tile-search2 :hover{background:#ca0002;}
+
+/*** Box Tables ***/ 
+.title_box {background: #c12424;}
+.sidebar-content {border-left: 3px solid #c12424;border-right: 3px solid #c12424;border-bottom: 3px solid #c12424;}
+.news24 li.active-live:hover {background: #FFBFBF;}
+.module-border-2 {border-top: 0px solid #ca0002;} 
+.module-category-color-2 {color: #ca0002;}
+.sidebar-wrapper h2, .sidebar-wrapper h3, .sidebar-wrapper h2 a, .sidebar-wrapper h3 a {color: #ca0002;}
+.label-info {background-color: #ca0002;}
+
+.colleft a{color: #ca0002;}
+li .thumbnail:hover {background:#ca0002;}
+.news-cat li:hover{background:#FFBFBF;}
+.module-more-post{background:#DDDDDD;}
+.module-more-post:hover{background:#FF9999;}
+
+#featured {border: 4px solid #ca0002;}
+
+
+.menu-pages li:hover {background: #000;}
+
+
+/*** News Page ***/
+.title-news {color: ##FFFFFF;background-color: #FF4C4C;border-color: #A1BDD1;}
+
+/*** Footer ***/ 
+.footer a{}
+.news-extended-category-link:hover, .news-extended-overview-link:hover , .news-extended-older  a:hover , .news-extended-newer a:hover , .news-back-overview:hover{background-color: #FF4C4C;color:#fff}
+.footerlinks h4{border-bottom: 2px solid #FF4C4C ;}
+
+/*** left-side admin ***/
+.notification {background-color: #FA603D;background-image: -moz-linear-gradient(center top , #FB9C87, #FA5F3D);border-color: #FA5833;}
+#ta-Settings span {background: url("../../images/icons-blue32.png") transparent;background-position: 0px -192px;}
+#ta-comments span {background: url("../../images/icons-blue32.png") transparent;background-position: -223px -256px;}
+#ta-Settings span:hover {background: url("../../images/icons-darkgray32.png") transparent;background-position: 0px -192px;}
+#ta-comments span:hover {background: url("../../images/icons-darkgray32.png") transparent;background-position: -223px -256px;}
+
+/*** Buttons ***/
+.button , .btn-send {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #FF7373, #ca0002);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF7373), to(#ca0002));
+  background-image: -webkit-linear-gradient(top, #FF7373, #ca0002);
+  background-image: -o-linear-gradient(top, #FF7373, #ca0002);
+  background-image: linear-gradient(to bottom, #FF7373, #ca0002);
+  background-repeat: repeat-x;
+  border-color:  #FFBFBF  #FFBFBF  #ca0002;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFBFBF', endColorstr='#ca0002', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-send:hover,.btn-send:focus,.btn-send:active,.btn-send.active,.btn-send.disabled,.btn-send[disabled] {color: #ffffff;background-color: #ca0002;*background-color: #499249;}

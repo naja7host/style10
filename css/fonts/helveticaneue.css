@@ -1,0 +1,16 @@
+/*
+	======================================================================
+		MAIN PAGE
+		NAJA7HOST
+		BLUE STYLE
+	======================================================================
+*/
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+* { 
+	font-family: 'Amiri', Arial ,Tahoma, sans-serif;
+}
+
+body {
+  font-family : 'Amiri', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}

@@ -1,0 +1,43 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Style 10
+	Description: News theme new is built for News Magazine, built in unlimited Concept, Unlimited Colors, Custom Widgets, Fully Customizable, Admin Panel, Comprehensive Theme Options, Unlimited Sidebars
+	Author: Naja7host
+	Author URI: http://www.naja7host.com
+	Version: 3
+	
+	@import "template.css";
+-----------------------------------------------------------------------------------------*/
+/*
+	======================================================================
+		E107 CORE STYLE
+		NAJA7HOST
+	======================================================================
+*/
+
+.nextprev {clear: both;padding: 20px 0px;position: relative;font-size: 13px;line-height: 13px;}
+.nextprev .nextprev_current , .nextprev .nextprev_link {position: relative;padding: 6px 12px;margin-left: -1px;line-height: 1.42857;text-decoration: none;background-color: rgb(255, 255, 255);border: 1px solid rgb(221, 221, 221);}
+.nextprev .nextprev_current {background-color: rgb(66, 139, 202);border-color: rgb(66, 139, 202);color: rgb(255, 255, 255);}
+.nextprev .nextprev_link:hover {color: rgb(42, 100, 150);background: none repeat scroll 0% 0% rgb(238, 238, 238);}
+.news-extended-category-link, .news-extended-overview-link , .news-extended-older  a , .news-extended-newer a {padding: 5px 14px;background-color: rgb(255, 255, 255);border: 1px solid rgb(221, 221, 221);border-radius: 15px;}
+.news-extended-category-link:hover, .news-extended-overview-link:hover , .news-extended-older  a:hover , .news-extended-newer a:hover , .news-back-overview:hover{background-color: rgb(153, 153, 153);}
+.news-back-overview {border-top: 1px solid #eef1f5;bottom: 0;float: right;padding: 8px 0;text-align: center;width: 100%;}
+.searchhighlight{text-decoration: underline;cursor:pointer;}
+.button{}
+.defaulttext{}
+.fborder{}
+.fcaption{}
+.forumheader{}
+.forumheader2{}
+.forumheader3{}
+.indent{}
+.installed{}
+.installe{color: #b94a48;background-color: #f2dede;border-color: #eed3d7;margin-bottom:10px;}
+.login{}
+.pass{}
+.smalltext{}
+.mediumtext{}
+.tbox{width: 100%;}
+.search{}
+.user {}
+.helpbox{width: 100%;}  

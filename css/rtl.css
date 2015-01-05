@@ -1,0 +1,63 @@
+/*-----------------------------------------------------------------------------------*/
+/*	   	body , basics
+/*-----------------------------------------------------------------------------------*/
+html, body {
+   overflow-x:hidden;
+   overflow-y:auto;
+   direction: rtl;
+   /*font:400 13px 'Droid Arabic Kufi' , Arial , tahoma;*/
+}
+.pull-right{float:left!important}
+.pull-left{float:right!important}
+.text-right {text-align: left;}
+.text-left {text-align: right;}
+/*** Header ***/
+.nav-first-w {}
+.nav-last-w {}
+.nav-first {}
+.nav-first-right{float:right;}
+.nav-first-left {float: left;text-align:right;}
+.socialsite {float: right;}
+.socialsite li {float: right;}
+.socialsite li.follow {}
+a.facebook , a.youtube ,a.rss  ,a.flicker ,a.twitter ,a.googleplus, a.skype {float: right;}
+
+.search form {float: left;margin-right: 43%;margin-left: 0px;}
+.search form input.tbox {float: right;}
+
+.logo-header {float: right;}
+.advert-header-728 {}
+
+.nav-last .nav {float: right;}
+.nav-last .nav li {float: right;border-left:1px solid #505061;border-right:1px solid #1F1F26;}
+.nav-last .nav li:first-child {border-right: medium none;border-left: none;}
+
+#Clock {text-align: right;}
+
+.content {/*float: right;*/ }
+.sidebar {float: left;}
+
+.slider-home {/*padding-left: 9px;padding-right: 0px;*/}
+.home-featured {float: right;}
+.left-slider{}
+#featured ul.ui-tabs-nav {right: 5px;}
+.mudule-tile-search a {padding: 0 16px 0 0;}
+
+
+.module-posts-1 ul {float: right;}
+.module-posts-1 li:first-child {float: right;margin-left: 10px;}
+.module-posts-1 li:first-child .thumbnail {float: right;padding-left: 10px;}
+.module-posts-1 li {float: right;padding: 5px 7px 0px;}
+.module-posts-1 li .menu {float: right;padding: 5px 0;}
+.module-posts-1 li .menu .thumbnail {float: right;}
+.module-posts-1 li .title {padding-right: 6px;}
+
+.module-posts-1 ul  ,.module-posts-2 ul  ,.module-posts-3 ul  ,.module-posts-4 ul   {/*float: right;*/}
+.module-posts-1 li , .module-posts-2 li , .module-posts-3 li , .module-posts-4 li {float: right;}
+.module-posts-1 li .thumbnail  , .module-posts-2 li .thumbnail  , .module-posts-3 li .thumbnail  ,.module-posts-4 li .thumbnail {float: right;margin: 5px 0px 0px 10px;}
+
+.news24 ul li span.date {float: right;margin: 0px 0px 0px 8px !important;}
+.more_news {float: left;}
+.module-border-2 .news_image  , .panel-body .news_image{float: right; }
+.colright {float: right;}
+.colleft {direction: rtl;display: inline;float: left;text-align: left;}

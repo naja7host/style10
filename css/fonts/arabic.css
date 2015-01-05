@@ -1,0 +1,17 @@
+/*
+	======================================================================
+		MAIN PAGE
+		NAJA7HOST
+		BLUE STYLE
+	======================================================================
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+* { 
+	font-family: 'Droid Arabic Naskh', Arial ,Tahoma, sans-serif;
+	/*font-size: 14px;*/	
+}
+body {
+  font-family : 'Droid Arabic Naskh',  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
