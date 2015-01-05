@@ -1,5 +1,5 @@
 # Click-Once directory
-cache/
+cache/*
 notused/
 js/notused/
 css/notused/
