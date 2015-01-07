@@ -3,18 +3,34 @@ if (!defined('e107_INIT')) { exit; }
 
 class style1 {
 	
-	public function get_new_version() 
+	public function get_new_version($theme) 
 	{
 		global $themeversion, $themerawname ;
 
 		$update = "";
+			
+		if(is_writable(THEME))
+		{
+			$disabled ="" ;
+			$writeable_message ="";
+		} 
+		else 
+		{
+			$disabled =" disabled='disabled'" ;
+			$writeable_message ="
+								<tr class='warning'>
+									<td>". LAN_THEME_ADMIN_WARNING ."	</td>
+									<td>". LAN_THEME_UPDATE_02 . THEME_ABS . LAN_THEME_UPDATE_03 ."</td>
+								</tr>";
+		}	
 		
 		// 
 		$raw_response =  file_get_contents("https://raw.githubusercontent.com/naja7host/$themerawname/master/README.md");
 		
 		if ( !$raw_response  )
-			return $version = "	<tr class='danger' >
-									<td>". LAN_THEME_ADMIN_87."	</td>
+			return $version = "	$writeable_message
+								<tr class='danger' >
+									<td>". LAN_THEME_UPDATE_03."	</td>
 									<td>N/A</td>
 								</tr>";
 
@@ -28,9 +44,9 @@ class style1 {
 				$version = $version_readme;
 				
 				$update ="			
-									<button class='btn btn-primary button-save btn-xs' name='frontpage_news_submit_update_theme'>
+									<button class='btn btn-primary button-save btn-xs' $disabled  name='frontpage_news_submit_update_theme'>
 										<span class='glyphicon glyphicon-import'></span>
-										<span class='hidden-phone'>".LAN_THEME_ADMIN_88."</span>
+										<span class='hidden-phone'>". LAN_THEME_UPDATE_05 ."</span>
 									</button>";												
 			}
 			else 
@@ -39,7 +55,7 @@ class style1 {
 				$version = $version_readme;
 				$update ="			<button class='btn btn-default button-save btn-xs'  disabled='disabled' name='frontpage_news_submit_update_theme'>
 										<span class='glyphicon glyphicon-stop'></span>
-										<span class='hidden-phone'>".LAN_THEME_ADMIN_88."</span>
+										<span class='hidden-phone'>". LAN_THEME_UPDATE_05 ."</span>
 									</button>";
 			}			
 		}
@@ -47,10 +63,13 @@ class style1 {
 		// Refresh every 6 hours
 		// To be Added next release
 		
-		return "				<tr ".$class.">
-									<td>". LAN_THEME_ADMIN_87."	</td>
+		return "				$writeable_message
+								<tr ".$class.">
+									<td>". LAN_THEME_UPDATE_04 ."	</td>
 									<td>". $version . $update ."</td>
-								</tr>";
+								</tr>
+								
+								";
 	}		
 	
 	/**
@@ -92,6 +111,9 @@ class style1 {
 		curl_setopt( $ch, CURLOPT_BINARYTRANSFER, false );
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);				
+		// curl_setopt($ch, CURLOPT_NOPROGRESS, false);				
+		// curl_setopt($ch, CURLOPT_PROGRESSFUNCTION, 'progress');				
+		// curl_setopt($ch,  CURLOPT_WRITEFUNCTION , 'body');				
 		# increase timeout to download big file
 		curl_setopt( $ch, CURLOPT_CONNECTTIMEOUT, 10 );
 		# write data to local file
@@ -253,12 +275,12 @@ $xurls = array(
 	'instagram'		=>	array('label'=>"Instagram",	"placeholder"=>""),
 	'linkedin'		=>	array('label'=>"LinkedIn",	"placeholder"=>"eg. http://www.linkedin.com/groups?home=&gid=1782682"),
 	'github'		=>	array('label'=>"Github",	"placeholder"=>"eg. https://github.com/naja7host"),
-	'pinterest'		=>	array('label'=>"pinterest",	"placeholder"=>""),
-	'skype'			=>	array('label'=>"skype",		"placeholder"=>""),	
-	'vimeo'			=>	array('label'=>"vimeo",		"placeholder"=>""),	
-	'picasa'		=>	array('label'=>"picasa",	"placeholder"=>""),	
-	'tumblr'		=>	array('label'=>"tumblr",	"placeholder"=>""),		
-	'rss'			=>	array('label'=>"rss",		"placeholder"=>"eg. ". e_SITE . e_PLUGIN ."rss_menu/rss.php"),
+	'pinterest'		=>	array('label'=>"Pinterest",	"placeholder"=>""),
+	'skype'			=>	array('label'=>"Skype",		"placeholder"=>""),	
+	'vimeo'			=>	array('label'=>"Vimeo",		"placeholder"=>""),	
+	'picasa'		=>	array('label'=>"Picasa",	"placeholder"=>""),	
+	'tumblr'		=>	array('label'=>"Tumblr",	"placeholder"=>""),		
+	'rss'			=>	array('label'=>"RSS",		"placeholder"=>"eg. ". e_SITE . e_PLUGIN ."rss_menu/rss.php"),
 );	
 	
 if(is_array($pref['xurl']))

@@ -7,28 +7,27 @@ if (!defined('e107_INIT')) { exit; }
 	require_once(e_HANDLER."file_class.php");
 	$fl = new e_file;
 	
-if (isset($_POST['frontpage_news_submit_slider'])) {	
-	// echo $_POST['frontpage_news_slider_type'] ;
-	$pref['frontpage_news_slider_type'] = $_POST['frontpage_news_slider_type'] ;	
-	save_prefs();
-	$result_msg = LAN_FRONTPAGE_16;
-	$result = "			<div class='alert alert-success'>
-							<button class='close' data-dismiss='alert' type='button'>
-								<i class='icon-remove'></i>
-							</button>
-							<i class='icon-ok green'></i>	
-							<strong >$result_msg</strong >							
-						</div>	
-						";	
-} 
+	if (isset($_POST['frontpage_news_submit_slider'])) {	
+		// echo $_POST['frontpage_news_slider_type'] ;
+		$pref['frontpage_news_slider_type'] = $_POST['frontpage_news_slider_type'] ;	
+		save_prefs();
+		$result_msg = LAN_FRONTPAGE_16;
+		$result = "			<div class='alert alert-success'>
+								<button class='close' data-dismiss='alert' type='button'>
+									<i class='icon-remove'></i>
+								</button>
+								<i class='icon-ok green'></i>	
+								<strong >$result_msg</strong >							
+							</div>";	
+	} 
 
-if (isset($_POST['frontpage_news_submit_upload'])) 
-{
-	$pref['upload_storagetype'] = '1';
-	require_once(e_HANDLER.'upload_handler.php');
-	$uploaded = file_upload(THEME.'images/logo/');
+	if (isset($_POST['frontpage_news_submit_upload'])) 
+	{
+		$pref['upload_storagetype'] = '1';
+		require_once(e_HANDLER.'upload_handler.php');
+		$uploaded = file_upload(THEME.'images/logo/');
 
-}	
+	}
 // ===========================================================================
 
 	$path = THEME."sliders/" ;
@@ -39,7 +38,7 @@ if (isset($_POST['frontpage_news_submit_upload']))
 	}	
 	
 	$selector .= "<select class='tbox sc-imageselector' name='frontpage_news_slider_type' id='frontpage_news_slider_type' >
-	<option value=''>".LAN_THEME_ADMIN_83."</option>\n";
+	<option value=''>".LAN_THEME_ADMIN_LISTSELECT."</option>\n";
 	foreach($filelist as $file)
 	{
 		$dir = str_replace($path,"",$file['path']);
@@ -49,18 +48,18 @@ if (isset($_POST['frontpage_news_submit_upload']))
 	$selector .= "</select>";
 	$pvw_default = ($file['fname']."png") ? $path.$file['fname']."png" : e_IMAGE_ABS."generic/blank.gif";
 	
-	$text .= "	<li class='active'>".LAN_THEME_ADMIN_15."</li>
+	$text .= "	<li class='active'>".LAN_THEME_ADMIN_SIDE_4."</li>
 			</ol><!--.breadcrumb-->
 			". $result ."	
 			". $rs->form_open("post", e_SELF."?slider" ,  'frontpage_news_submit_slider', '', 'enctype="multipart/form-data"') ."
 			<!--PAGE CONTENT BEGINS HERE-->	
 			<div class='panel panel-primary'>
-				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_15 ."</div>							
+				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_4 ."</div>							
 				<div class='panel-body'>										
 					<div class='table-responsive' >
 						<table class='table  table-hover'>
 							<tr >
-								<td>". LAN_THEME_ADMIN_83." </td>
+								<td>". LAN_THEME_ADMIN_LISTSELECT." </td>
 								<td> ". $selector ."</td>
 							</tr>				
 						</table>
@@ -90,7 +89,7 @@ if (isset($_POST['frontpage_news_submit_upload']))
 	$text .= "	
 			<!--PAGE CONTENT BEGINS HERE-->	
 			<div class='panel panel-info'>
-				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_93 ."</div>							
+				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_COLOR_03 ."</div>							
 				<div class='panel-body'>										
 					<div class='row'>
 						$slider_prev

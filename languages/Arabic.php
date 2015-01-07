@@ -51,7 +51,7 @@ define("LAN_THEME_37", "نشر الخبر  : ");
 define("LAN_THEME_38", "رابط مختصر للمقالة تجده هنا  ");
 define("LAN_THEME_39", "أدوات الموضوع  ");
 define("LAN_THEME_40", "بتاريخ ");
-define("LAN_THEME_41", " ");
+define("LAN_THEME_41", "عاجل");
 define("LAN_THEME_42", " الروابط  الاجتماعية ");
 define("LAN_THEME_43", "  اخر التغريدات ");
 define("LAN_THEME_44", "  ألبوم الصور  ");

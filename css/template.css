@@ -107,24 +107,28 @@ a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flic
 		NAJA7HOST
 	======================================================================
 */
-.nav-last {background: #31313C;height: 39px;/*padding-right: 4.8%;*/}
+/*
+.nav-last {background: #31313C;height: 39px;}*/
 .nav-last {width: 100%;margin: 0 auto;display: table;}
 
-.nav-last .nav {line-height: 1.0;}
-.nav-last .nav, .nav-last .nav * {list-style: none;margin: 0;padding: 0;}
-.nav-last .nav, .nav-last .nav * {list-style: none;margin: 0;padding: 0;}
-.nav-last .nav a, .nav-last .nav a:visited {color: #fff;}
-.nav-last .nav a {padding: 10px 15px 16px;display: block;position: relative;text-decoration: none;}
-.nav-last .nav li {float: left;position: relative;border-right: 1px solid #505061;border-left: 1px solid #1F1F26;}
-.nav-last .nav li:hover{border-right:none !important;border-left:none !important;}
-.nav-last .nav li:first-child {background: none repeat scroll 0 0 #4477cc;border-right:none;border-left: medium none;text-indent: -9999px;width: 50px;}
-.nav-last .nav li:first-child a {background: url(../images/home.png) no-repeat scroll 50% 50% !important;}
-.nav-last .nav li li{background:#6BA632;border-top:1px solid #5A8C2B;border-bottom:1px solid #7ABF3A;}
-.nav-last .nav li li li{background:#6BA632;border-top:1px solid #5A8C2B;border-bottom:1px solid #7ABF3A;border-right:none;border-left:none;}
-.nav-last .nav li li:first-child{border-top:none;border-right:none;border-left:none;}
-.nav-last .nav li li:last-child{border-bottom:none;border-right:none;border-left:none;}
-.nav-last .nav li li:hover,.nav-last .nav li li.sfHover,.nav-last .nav li li a:focus,.nav-last .nav li li a:hover,.nav-last .nav li a:active{background:#4477cc;}
-.nav-last .nav li:hover ul,.nav-last .nav li.sfHover ul{top:2.8em;}
+.nav-last >.nav {line-height: 1.0;}
+.nav-last >.nav, .nav-last > .nav * {list-style: none;margin: 0;padding: 0;}
+.nav-last >.nav, .nav-last > .nav * {list-style: none;margin: 0;padding: 0;}
+.nav-last >.nav a, .nav-last > .nav a:visited {color: #fff;}
+.nav-last >.nav a {padding: 10px 15px 16px;/*display: block;position: relative;text-decoration: none;*/}
+.nav-last >.nav > li  , .nav-last >.nav > li  li {border-right: 1px solid #505061;border-left: 1px solid #1F1F26;}
+.nav-last >.nav > li:hover{border-right:none !important;border-left:none !important;}
+.nav-last >.nav > li:first-child {background: none repeat scroll 0 0 #4477cc;border-right:none;border-left: medium none;text-indent: -9999px;width: 50px;}
+.nav-last >.nav > li:first-child a {background: url(../images/home.png) no-repeat scroll 50% 50% !important;}
+.nav-last >.nav > li  li {background: #31313C;border-bottom: 1px solid #505061;border-top: 1px solid #1F1F26;}
+
+
+/*.nav-last.nav li li{background:#6BA632;border-top:1px solid #5A8C2B;border-bottom:1px solid #7ABF3A;}
+.nav-last.nav li li li{background:#6BA632;border-top:1px solid #5A8C2B;border-bottom:1px solid #7ABF3A;border-right:none;border-left:none;}
+.nav-last.nav li li:first-child{border-top:none;border-right:none;border-left:none;}
+.nav-last.nav li li:last-child{border-bottom:none;border-right:none;border-left:none;}
+.nav-last.nav li li:hover,.nav-last .nav li li.sfHover,.nav-last .nav li li a:focus,.nav-last .nav li li a:hover,.nav-last .nav li a:active{background:#4477cc;}
+.nav-last .nav li:hover ul,.nav-last .nav li.sfHover ul{top:2.8em;}*/
 .nav-last .nav li:hover, .nav-last .nav li.sfHover, .nav-last .nav a:focus, .nav-last .nav a:hover, .nav-last .nav a:active {background: #4477cc;}
 
 /*** cat news border-bottom: 2px solid rgb(115, 51, 125); **/
@@ -142,6 +146,10 @@ a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flic
 .cat-8, .cat-18, .cat-28, .cat-38{background-color: #7D3343;}
 .cat-9, .cat-19, .cat-29, .cat-39{background-color: #7D3343;}
 
+.ajil {background-color: #FF0000;padding:5px;color:#fff;border-top:2px solid #fff;}
+.ajil h1{font-weight:bold;text-align: center;font-size: 50px;}
+.ajil .breaknews{border-left:5px solid #fff;min-height:90px;}
+
 /*
 	======================================================================
 		search
@@ -152,7 +160,7 @@ a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flic
 .search form {background-color: #FFFFFF;}
 .search form {float: right;margin-left: 43%;margin-left: 0px;}
 .search form input.tbox {outline: medium none;background-color: #fff;border: 0px solid #69C;color: #181818;padding:0;width: 160px;outline: medium none;}
-.search form input.button {background: url('../images/search-cat.png') no-repeat scroll 0px 9px transparent;outline: medium none;border: medium none;height: 30px;margin-left: 10px;width: 18px;cursor: pointer;text-indent: -9999px;}
+.search form input.button {background: url('../images/search.png') no-repeat scroll 0px 9px transparent;outline: medium none;border: medium none;height: 30px;margin-left: 10px;width: 18px;cursor: pointer;text-indent: -9999px;}
 .search input {/* font: 400 12px/15px "Droid Arabic Kufi";*/height: 32px;}
 
 /*
@@ -205,7 +213,7 @@ a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flic
 .module-posts-1 {overflow: hidden;    padding: 10px 15px 10px 10px;}
 .module-posts-1 ul {/*float: right; */   list-style: none outside none;}
 .module-posts-1 li:first-child {border-bottom: medium none;float: left;   /*height: 305px;*/    margin-left: 10px;    overflow: hidden;	text-align: justify;   }
-.module-posts-1 li:first-child .thumbnail {  height: 257px;    padding-left: 10px;    width: 100%;	padding: 0px;	margin-bottom: 0px;	background-color: #ffffff;	border: 1px solid #dddddd;	border-radius: 4px;}
+.module-posts-1 li:first-child .thumbnail {width: 100%;height: 257px;/*padding: 0px;padding-left: 10px;margin-bottom: 0px;background-color: #ffffff;border: 1px solid #dddddd;border-radius: 4px;*/}
 .module-posts-1 li:first-child .thumbnail .news_image  {width: 100%;	height: 100%;	} 
 .module-posts-1 li:first-child .text  {display: block;} 
 .module-posts-1 li {padding: 5px 7px 0px;width: 32.8%;}

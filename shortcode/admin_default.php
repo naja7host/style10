@@ -4,45 +4,46 @@ if (!defined('e107_INIT')) { exit; }
 	require_once(e_HANDLER.'form_handler.php');
 	$rs = new form;	
 	$count = $sql->db_count("news_category");
-if (isset($_POST['frontpage_news_submit_default'])) {
-	$count = $sql->db_count("news_category");
-	$pref['frontpage_news_slider'] = $_POST['frontpage_news_slider'];
-	$pref['frontpage_facebook'] = $tp->todb($_POST['frontpage_facebook']);
-	// $pref['frontpage_cat_news'] = $tp->todb($_POST['frontpage_cat_news']);
-	$pref['frontpage_catnews'] = $_POST['frontpage_catnews'];
-	$pref['frontpage_catnews_limit'] = $_POST['frontpage_catnews_limit'];	
-	$pref['frontpage_news_last24'] = $tp->todb($_POST['frontpage_news_last24']);
-	$pref['frontpage_news_last24_limit'] = $tp->todb($_POST['frontpage_news_last24_limit']);
-	$pref['frontpage_box_1_limit'] = $tp->todb($_POST['frontpage_box_1_limit']);
-	$pref['frontpage_box_2_limit'] = $tp->todb($_POST['frontpage_box_2_limit']);
-	$pref['frontpage_news_ta7rir'] = $tp->todb($_POST['frontpage_news_ta7rir']);
-	$pref['frontpage_news_block2'] = $tp->todb($_POST['frontpage_news_block2']);
-	$pref['frontpage_news_block2_sect'] = $tp->todb($_POST['frontpage_news_block2_sect']);
-	$pref['frontpage_news_block3'] = $tp->todb($_POST['frontpage_news_block3']);
-	$pref['frontpage_news_showdate'] = $_POST['frontpage_news_showdate'];
-	$pref['frontpage_news_datetype'] = $_POST['frontpage_news_datetype'];
-	$pref['frontpage_news_caricature'] = $_POST['frontpage_news_caricature'];
-	$pref['frontpage_news_photograph'] = $_POST['frontpage_news_photograph'];
-	 
-	while($i <= $count)
-	{
-		$pref['frontpage_box_'.$i.''] = $tp->todb($_POST['frontpage_box_'.$i.'']);
-		//echo $i ."->" . $_POST['frontpage_box_'.$i.''] ." //";		
-		$i++;
-	}
-	save_prefs();
-	$sql->db_Update("er_ytm_gallery", "disp_download='".$_POST['disp_download']."' ");
-	$result_msg = LAN_FRONTPAGE_16;
-	$result = "			<div class='alert alert-success'>
-							<button class='close' data-dismiss='alert' type='button'>
-								<i class='icon-remove'></i>
-							</button>
-							<i class='icon-ok green'></i>	
-							<strong >$result_msg</strong >
-							
-						</div>	
-						";		
-}  
+	
+	if (isset($_POST['frontpage_news_submit_default'])) {
+		$count = $sql->db_count("news_category");
+		$pref['frontpage_news_slider'] = $_POST['frontpage_news_slider'];
+		$pref['frontpage_facebook'] = $tp->todb($_POST['frontpage_facebook']);
+		// $pref['frontpage_cat_news'] = $tp->todb($_POST['frontpage_cat_news']);
+		$pref['frontpage_catnews'] = $_POST['frontpage_catnews'];
+		$pref['frontpage_catnews_limit'] = $_POST['frontpage_catnews_limit'];	
+		$pref['frontpage_news_last24'] = $tp->todb($_POST['frontpage_news_last24']);
+		$pref['frontpage_news_last24_limit'] = $tp->todb($_POST['frontpage_news_last24_limit']);
+		$pref['frontpage_box_1_limit'] = $tp->todb($_POST['frontpage_box_1_limit']);
+		$pref['frontpage_box_2_limit'] = $tp->todb($_POST['frontpage_box_2_limit']);
+		$pref['frontpage_news_ta7rir'] = $tp->todb($_POST['frontpage_news_ta7rir']);
+		$pref['frontpage_news_block2'] = $tp->todb($_POST['frontpage_news_block2']);
+		$pref['frontpage_news_block2_sect'] = $tp->todb($_POST['frontpage_news_block2_sect']);
+		$pref['frontpage_news_block3'] = $tp->todb($_POST['frontpage_news_block3']);
+		$pref['frontpage_news_showdate'] = $_POST['frontpage_news_showdate'];
+		$pref['frontpage_news_datetype'] = $_POST['frontpage_news_datetype'];
+		$pref['frontpage_news_caricature'] = $_POST['frontpage_news_caricature'];
+		$pref['frontpage_news_photograph'] = $_POST['frontpage_news_photograph'];
+		 
+		while($i <= $count)
+		{
+			$pref['frontpage_box_'.$i.''] = $tp->todb($_POST['frontpage_box_'.$i.'']);
+			//echo $i ."->" . $_POST['frontpage_box_'.$i.''] ." //";		
+			$i++;
+		}
+		save_prefs();
+		$sql->db_Update("er_ytm_gallery", "disp_download='".$_POST['disp_download']."' ");
+		$result_msg = LAN_FRONTPAGE_16;
+		$result = "			<div class='alert alert-success'>
+								<button class='close' data-dismiss='alert' type='button'>
+									<i class='icon-remove'></i>
+								</button>
+								<i class='icon-ok green'></i>	
+								<strong >$result_msg</strong >
+								
+							</div>	
+							";		
+	}  
 
 $sql->db_Select("er_ytm_gallery", "disp_download");	
 while($row = $sql->db_Fetch()) {

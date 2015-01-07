@@ -3,11 +3,11 @@ if (!defined('e107_INIT')) { exit; }
 
 // ===========================================================================
 	
-	$text .= "	<li class='active'>".LAN_THEME_ADMIN_18."</li>
+	$text .= "	<li class='active'>".LAN_THEME_ADMIN_SIDE_14."</li>
 			</ol><!--.breadcrumb-->
 			<!--PAGE CONTENT BEGINS HERE-->	
 			<div class='panel panel-primary'>
-				<div class='panel-heading'><i class='icon-star orange'></i> ". LAN_THEME_ADMIN_96 ."</div>							
+				<div class='panel-heading'><i class='icon-star orange'></i> ". LAN_THEME_ABOUT_01 ."</div>							
 				<div class='panel-body'>										
 					<div class='row' >
 						<div class='col-md-6 text-right' >
@@ -30,13 +30,9 @@ if (!defined('e107_INIT')) { exit; }
 					</div><!-- end table respo -->											
 				</div><!-- end panel body -->
 			</div><!-- end panel -->
-			<input type='hidden' name='e-token' value='".e_TOKEN."' />
-			";	
-	
-	$text .= "	
-			<!--PAGE CONTENT BEGINS HERE-->	
+
 			<div class='panel panel-info'>
-				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_97 ."</div>							
+				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ABOUT_02 ."</div>							
 				<div class='panel-body'>										
 					<div class='table-responsive' >
 						<table class='table  table-hover'>
@@ -46,8 +42,8 @@ if (!defined('e107_INIT')) { exit; }
 									<td> Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</td>
 								</tr>				
 								<tr >
-									<td> Bootstrap 3 Arabic </td>
-									<td> بوتستراب ٣ بالعربي بس مشخلع </td>
+									<td> Bootstrap 3 RTL Theme </td>
+									<td> Bootstrap RTL provides simple yet robust right-to-left capability for Bootstrap 3, by employing new theming feature of it. Simply put its CSS after bootstrap's original CSS, to the pages designed by Bootstrap 3. It works just like an extension on top of the original Bootstrap: </td>
 								</tr>
 								<tr >
 									<td> jQuery </td>

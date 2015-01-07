@@ -9,10 +9,8 @@ if (!defined('e107_INIT')) { exit; }
 		<i class='icon-double-angle-up icon-only bigger-110'></i>
 	</a>
 		<!--basic scripts-->
-		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
 		<script src='".THEME_ABS."js/bootstrap.min.js'></script>
 		<!--page specific plugin scripts-->
-		<script src='".THEME_ABS."js/prettify.js'></script>
 		<!--ace scripts-->	
 		<!--inline scripts related to this page-->";
 		

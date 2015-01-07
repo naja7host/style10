@@ -34,6 +34,7 @@ if (XURL_RSS)
 	$socialicons .=	"<li><a class='rss' alt='".LAN_THEME_10."' title='".LAN_THEME_10."' href='".XURL_RSS."'>rss</a></li>";	
 	
 
+$socialicons .="</ul>"; 
 	
 return $socialicons;
 

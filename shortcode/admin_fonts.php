@@ -21,23 +21,18 @@ if (isset($_POST['frontpage_news_submit_fonts'])) {
 }  						
 // ===========================================================================
     
-	$text .= "	<li class='active'>".LAN_THEME_ADMIN_9."</li>
+	$text .= "	<li class='active'>".LAN_THEME_ADMIN_SIDE_2."</li>
 			</ol><!--.breadcrumb-->
-						<!--
-						<div class='panel panel-primary '>
-						<div class='panel-heading'>".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_9 ."</div>
-						<div class='panel-body'>
-						-->
 			". $result ."	
 			". $rs->form_open("post", e_SELF."?fonts" ,  'frontpage_news_fonts', '', 'enctype="multipart/form-data"') ."
 			<!--PAGE CONTENT BEGINS HERE-->	
 			<div class='panel panel-primary'>
-				<div class='panel-heading'><i class='icon-star orange'></i> ". LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_9 ."</div>							
+				<div class='panel-heading'><i class='icon-star orange'></i> ". LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_2 ."</div>							
 				<div class='panel-body'>										
 					<div class='table-responsive' >
 						<table class='table  table-hover'>
 							<tr >
-								<td>". LAN_THEME_ADMIN_95."	</td>
+								<td>". LAN_THEME_FONT_01."	</td>
 								<td>
 									<div class='radio'>
 										<label >

@@ -21,11 +21,9 @@
 			if(!$sql->db_Select_gen($query))
 			{
 				$text = '
-				<div class="news24 horizontal-only jspScrollable">
+				<div class="news24">
 					<ul>				
-						<li class="active-live"><span class="date">00:00</span>
-							'. LAN_THEME_26 .'
-						</li>						
+						<li class="active-live"><span class="date">00:00</span>'. LAN_THEME_26 .'</li>						
 					<ul>
 				</div>
 				<div class="clearfix"></div>';
@@ -33,25 +31,22 @@
 			else 
 			{
 				$text = '
-				<div class="news24 horizontal-only jspScrollable" >
+				<div class="news24" >
 					<ul>';
 				while($row = $sql -> db_Fetch()){
-				extract($row);
-				$url = make_url($row);
-				$NEWSLISTSTYLE1 = '
-						<li class="active-live"><span class="date">{NEWSDATE=short}</span>
-							{NEWSTITLELINK=extend}
-						</li>				
-
-					';
+					extract($row);
+					$url = make_url($row);
+				
+					$NEWSLISTSTYLE1 = '<li class="active-live"><span class="date">{NEWSDATE=short}</span>{NEWSTITLELINK=extend}</li>';
+						
 					$text .= $ix->render_newsitem($row, 'return', '', $NEWSLISTSTYLE1, $param);
 				}
 				$text .= "
-					<ul>
+					</ul>
 				</div>
 				<div class='clearfix'></div>";
 			}
 		$caption = "<a href='http://".e_DOMAIN."/news.php?cat.$cat' > ". $category_name ." </a>";
 		
 	
-	$ns -> tablerender($caption, $text);
+	$ns -> tablerender($caption, $text , "news24");

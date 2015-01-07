@@ -23,8 +23,7 @@ $POLL_NOTVOTED_START = "
 		<div class='panel-heading'>
 			<h3 class='panel-title'>{QUESTION}</h3>
 		</div>
-		<div class='panel-body'>
-			<p >";
+		<div class='panel-body'>";
 
 $POLL_NOTVOTED_LOOP = "
 				<div class='checkbox radio'>
@@ -35,10 +34,8 @@ $POLL_NOTVOTED_LOOP = "
 				</div>	";
 
 $POLL_NOTVOTED_END = "
-			</p>
 			<div class='text-center'>
 				{SUBMITBUTTON}
-				<p></p>
 			</div>
 		</div>
 		<div class='panel-footer'>

@@ -16,8 +16,8 @@ a:hover , a:focus {}
 
 /* Navigation Links*/
 .nav-last {}
-.nav-last .nav li:first-child {background: none repeat scroll 0 0 #ca0002;}
-.nav-last .nav li:hover, .nav-last .nav li.sfHover, .nav-last .nav a:focus, .nav-last .nav a:hover, .nav-last .nav a:active {background: #ca0002;}
+.nav-last > .nav > li:first-child {background: none repeat scroll 0 0 #ca0002;}
+.nav-last > .nav > li:hover, .nav-last > .nav li.sfHover, .nav-last > .nav a:focus, .nav-last > .nav a:hover, .nav-last > .nav a:active {background: #ca0002;}
 
 /*** main Page ***/
 .mudule-tile-search {background: url("../../images/title_bg.png") no-repeat right #ca0002 ;}
@@ -26,6 +26,9 @@ a:hover , a:focus {}
 
 .module-more-post a:hover {color: #ca0002;}
 .mudule-tile-search2 :hover{background:#ca0002;}
+
+/*** Ajil News ***/
+.ajil {/*background-color: #FF4C4C;border-top:2px solid #fff;*/}
 
 /*** Box Tables ***/ 
 .title_box {background: #c12424;}
@@ -42,11 +45,12 @@ li .thumbnail:hover {background:#ca0002;}
 .module-more-post{background:#DDDDDD;}
 .module-more-post:hover{background:#FF9999;}
 
-#featured {border: 4px solid #ca0002;}
+#featured , #feature_outer, .arena {border: 4px solid #ca0002;}
 
 
 .menu-pages li:hover {background: #000;}
 
+/*.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {background-color: #4477cc;}*/
 
 /*** News Page ***/
 .title-news {color: ##FFFFFF;background-color: #FF4C4C;border-color: #A1BDD1;}

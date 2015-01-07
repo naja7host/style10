@@ -44,11 +44,13 @@ $register_sc[] = 'NEWSTITLELINK';
 $register_sc[] = 'NEWSBODY';
 $register_sc[] = 'EXTENDED';
 $register_sc[] = 'NEWSCOMMENTS';
+$register_sc[] = 'SITELINKS';
 
 // Custom Menus 
 $register_sc[] = 'LAST24';
 $register_sc[] = 'FACEBOOK';
 $register_sc[] = 'VIDEO';
+$register_sc[] = 'NEWSCATEGORYLINKS';
 
 // Addons
 $register_sc[] = 'INDEX';
@@ -62,6 +64,8 @@ $register_sc[] = 'SHOURTURL';
 $register_sc[] = 'LASTBLOCK';
 $register_sc[] = 'ADMINTOOLS';
 $register_sc[] = 'SOCIALICONS';
+$register_sc[] = 'BREAKINGNEWS';
+
 
 // $register_sc[] = "TICKER";
 // $register_sc[] = 'TA7RIR';
@@ -109,6 +113,10 @@ function theme_head() {
 	if(defined("TEXTDIRECTION"))
 		$headerstyle .= "<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
 
+	if(file_exists(THEME."css/custom.css"))
+		$headerstyle .= "<link href='".THEME_ABS."css/custom.css' rel='stylesheet' />";
+
+		
 	$headerstyle .= "
 	<script type='text/javascript' src='".THEME_ABS."js/jquery.min.js'></script>
 	<script type='text/javascript' src='".THEME_ABS."js/jquery-ui.min.js'></script>
@@ -118,6 +126,7 @@ function theme_head() {
 }
 
 $HEADERCALL = "
+{BREAKINGNEWS}
 <div class='container'>
 	<div class='nav-first-w'>
 		<div class='nav-first'>			
@@ -143,11 +152,11 @@ $HEADERCALL = "
 	</div>
 	<div class='clearfix'></div>
 	
-	<div class='nav-last-w'>
-		<div class='nav-last'>
-		  {MENU=4}
-		</div>
-	</div>
+
+		<nav class='nav-last navbar-inverse'>
+			". ( $pref['nclm_type'] ? "{LINKSTYLE=topnav}{SITELINKS=flat:1}" : "{NEWSCATEGORYLINKS}") ."
+		</nav>
+
 	<div class='clearfix'></div>
 	
 	<div class='wspfull'>		
@@ -311,31 +320,11 @@ $('#myTab a').click(function (e) {
 $CUSTOMHEADER['index'] = $HEADERINDEX ;
 $CUSTOMFOOTER['index'] = $FOOTERINDEX ;
 $CUSTOMPAGES['index']  = SITEURL.'index.php';
-$CUSTOMPAGES['index1']  = SITEURL.'index1.php';
-$CUSTOMPAGES['index2']  = SITEURL.'index2.php';
-
-
-$CUSTOMHEADER['others'] = $HEADER ;
-$CUSTOMHEADER['others'] .= "
-	<aside>
-		<div class='span4'>
-			{SETSTYLE=menu}
-			{VIDEO}
-		</div>
-	</aside>
-	<div class='span8'>" ;
-
-$CUSTOMFOOTER['others'] = "
-	</div>" ;
-$CUSTOMFOOTER['others'] .= $FOOTER ;
-$CUSTOMPAGES['others']  = 'others';
 
 // admin templates 
 $CUSTOMHEADER['admin-theme'] = " ";
 $CUSTOMFOOTER['admin-theme'] = " ";
 $CUSTOMPAGES['admin-theme']  = 'admin-theme.php';
-
-
 
 // You can customize the news-category bullet listing here.
 $NEWSARCHIVE ="<div>
@@ -653,13 +642,33 @@ function linkstyle($np_linkstyle)
 	{
 		case 'topnav':
 			$linkstyleset['linkdisplay']      = 1;
-			$linkstyleset['prelink'] = "<ul id='superfish-3' class='menu-pages'>";
+			$linkstyleset['prelink'] = "<ul class='nav '>";
 			$linkstyleset['postlink'] = "</ul>";
-			$linkstyleset['linkstart'] = "<li class='menu-item'>";
+			// parent normal links
+			$linkstyleset['linkstart'] = "<li>";
+			$linkstyleset['linkstart_hilite'] = "<li class='active'>  "; // css style
 			$linkstyleset['linkend'] = "</li>";
-			$linkstyleset['linkstart_hilite'] = "";
-			$linkstyleset['linkclass_hilite'] = "";
-			$linkstyleset['linkseparator'] = "<li class='divider-vertical'></li>";
+
+			// parent link with sublinks
+			$linkstyleset['linkstart_dropdown'] = "<li class='dropdown'>"; // css style
+			$linkstyleset['linkstart_dropdown_hilite'] = "<li class='active dropdown'>"; // css style
+			$linkstyleset['linkstart_dropdown_end'] = "</li>";
+			$linkstyleset['linkstart_dropdown_prefix'] = " class='dropdown-toggle' data-toggle='dropdown' role='button' aria-expanded='false' ";
+			$linkstyleset['linkstart_dropdown_suffix'] = "  <span class='caret'>";
+
+			$linkstyleset['linkseparator'] = "";
+			// sublinks styes
+			$linkstyleset['subprelink'] = "<ul class='dropdown-menu' role='menu' >";
+			$linkstyleset['subpostlink'] = "</ul>";
+			$linkstyleset['sublinkstart'] = "<li>";
+			$linkstyleset['sublinkend'] = "</li>";
+			
+			$linkstyleset['subsublinkstart'] = "<li class='dropdown-submenu'>";
+			$linkstyleset['subsublinkend'] = "</li>";			
+			
+			$linkstyleset['sublinkclass'] = "";
+			$linkstyleset['subindent'] = "";
+			
 		break;
 		
 		case 'topnav2':

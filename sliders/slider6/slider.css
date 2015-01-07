@@ -33,7 +33,7 @@
 .news_headlines .news_list li {width: auto;padding: 10px 0px;}
 .news_headlines .news_list li {background-position: 0px -200px;}
 .news_headlines .news_list li:hover, .news_headlines .news_list .active {width: auto;cursor: pointer;margin-right: -22px;z-index: 2;}
-.news_headlines .news_list li:hover, .news_headlines .news_list .active {/*background-position: right -717px*/background-image:url(../../images/news_list_hover.png);background-repeat:no-repeat;background-position:right -11px;border-left: 5px solid rgb(223, 1, 0);}
+.news_headlines .news_list li:hover, .news_headlines .news_list .active {/*background-position: right -717px*/background-image:url("news_list_hover.png");background-repeat:no-repeat;background-position:right -11px;border-left: 5px solid rgb(223, 1, 0);}
 .news_headlines .news_list li:hover a, .news_headlines .news_list .active a {text-shadow: none;border: medium none;font-size: 0.99em;}
 .news_headlines .news_list li:hover a, .news_headlines .news_list .active a {padding-right: 20px;padding-left: 15px;color: rgb(255, 255, 255);}
 .news_headlines .news_list li a {padding: 0px 10px;height: 23px;width: auto;line-height: 23px;}
@@ -43,7 +43,7 @@
 
 
 
-.news_headlines .headline, .news_headlines .news_list li {background-image: url("../../images/repeat_bg.png");background-repeat: repeat-x;}
+.news_headlines .headline, .news_headlines .news_list li {background-image: url("repeat_bg.png");background-repeat: repeat-x;}
 
 
 
