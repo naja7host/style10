@@ -82,12 +82,12 @@ define("LAN_THEME_LINKS_09", "عرض أقسام الاخبار");
 
 // ADS PAGE
 define("LAN_THEME_ADS_01", "ضع كود الإعلان");
-define("LAN_THEME_ADS_02", " - المقاس 728x90 - ");
-define("LAN_THEME_ADS_03", " - المقاس 468x60 - ");
-define("LAN_THEME_ADS_04", " - المقاس 300x250 - ");
-define("LAN_THEME_ADS_05", " - المقاس 320x100 - ");
-define("LAN_THEME_ADS_06", " - المقاس 300x600 - ");
-define("LAN_THEME_ADS_07", " - المقاس 336x280 - ");
+define("LAN_THEME_ADS_02", " - أعلى الصفحة أمام  اللوجو - ");
+define("LAN_THEME_ADS_03", " - أعلى الجهة اليسرى - ");
+define("LAN_THEME_ADS_04", " - بداية الخبر - ");
+define("LAN_THEME_ADS_05", " - نهاية الخبر - ");
+define("LAN_THEME_ADS_06", " - إعلان ثابت بالجهة اليمنى - ");
+define("LAN_THEME_ADS_07", " - إعلان ثابت بالجهة اليسرى - ");
 
 // CATNEWS PAGE
 
@@ -107,7 +107,6 @@ define("LAN_THEME_URGENT_03", "إعلان ثابت بالأعلى");
 define("LAN_THEME_URGENT_04", "محتوى الخبر");
 define("LAN_THEME_URGENT_05", "لعدم العرض اترك الخانة فارغة");
 
-
 // UPDATE PAGE
 define("LAN_THEME_UPDATE_01", "الإصدار المثبت ");
 define("LAN_THEME_UPDATE_02", "المجلد  ");
@@ -121,6 +120,14 @@ define("LAN_THEME_ABOUT_02", " التقنيات و الادوات التالية
 
 // PROMOTION PAGE
 
+
+// Commun language
+define('LAN_THEME_ADMIN_DISABLED', 'تعطيل البلوك');
+define("LAN_THEME_ADMIN_SAVE", " حفظ ");
+define("LAN_THEME_ADMIN_WARNING", " تنبيه ");
+define("LAN_THEME_ADMIN_YES", " نعم ");
+define("LAN_THEME_ADMIN_NO", " لا ");
+define("LAN_THEME_ADMIN_LISTSELECT", " اختر من القائمة   ");
 
 // 
 define("LAN_THEME_ADMIN_11", "إعدادات أخرى للرئيسية");
@@ -219,88 +226,4 @@ define("LAN_THEME_ADMIN_98", "");
 
 
 
-
-
-// Commun language
-define('LAN_THEME_ADMIN_DISABLED', 'تعطيل البلوك');
-define("LAN_THEME_ADMIN_SAVE", " حفظ ");
-define("LAN_THEME_ADMIN_WARNING", " تنبيه ");
-define("LAN_THEME_ADMIN_YES", " نعم ");
-define("LAN_THEME_ADMIN_NO", " لا ");
-define("LAN_THEME_ADMIN_LISTSELECT", " اختر من القائمة   ");
-
-
-
-/*
-
-define("CHAMALPRESS_3", "المزيد ... ");
-define("CHAMALPRESS_4", "عمود الصف الثاني ");
-define("CHAMALPRESS_5", "عمود  الصف الثالث ");
-define("CHAMALPRESS_6", " عمود اليمين العلوي : ");
-define("CHAMALPRESS_7", " عمود  اليمين السفلي : ");
-define("CHAMALPRESS_8", " ---  العمود الأيسر : ");
-
-// define('LAN_FRONTPAGE_1', 'إعدادات الصفحة الرئيسية');
-define('LAN_FRONTPAGE_2', 'تعداد عدد مشاهدات الأخبار');
-define('LAN_FRONTPAGE_3', 'إعدادات الصفحة الرئيسية');
-define('LAN_FRONTPAGE_4', 'تم  تركيب و تفعيل البلوجين بنجاح .');
-define('LAN_FRONTPAGE_5', 'صورة الجانب الأيمن');
-define('LAN_FRONTPAGE_6', 'وصف الرابط');
-define('LAN_FRONTPAGE_7', 'نص في اخر الصفحة');
-define('LAN_FRONTPAGE_8', 'إعدادات القائمة');
-define('LAN_FRONTPAGE_9', 'الخيارات');
-define('LAN_FRONTPAGE_10', 'لا يوجد حاليا أي نص للمساعدة ، سيتم ذلك خلال الاصدارات القادمة');
-define('LAN_FRONTPAGE_11', 'ملف المساعدة');
-define('LAN_FRONTPAGE_12', 'تم ترقية القائمة بنجاح');
-define('LAN_FRONTPAGE_13', 'صورة البانر 2');
-define('LAN_FRONTPAGE_14', 'صورة البانر 3');
-define('LAN_FRONTPAGE_15', 'تحديث الخيارات');
-define('LAN_FRONTPAGE_16', 'تم تحديث الإعدادات بنجاح');
-define('LAN_FRONTPAGE_17', 'مفعل');
-define('LAN_FRONTPAGE_18', 'معطل');
-define('LAN_FRONTPAGE_19', 'تفعيل الصفحة الرئيسية');
-define('LAN_FRONTPAGE_20', 'إعدادات عامة');
-define('LAN_FRONTPAGE_21', 'خيارات الاعلانات');
-define('LAN_FRONTPAGE_22', 'المساعدة');
-define('LAN_FRONTPAGE_23', 'صورة البانر 1');
-define('LAN_FRONTPAGE_24', 'رابط الصورة');
-define('LAN_FRONTPAGE_25', 'موقع إخباري');
-define('LAN_FRONTPAGE_26', 'موقع دعوي');
-define('LAN_FRONTPAGE_27', 'موقع تجاري');
-define('LAN_FRONTPAGE_28', 'لا يوجد أعدادات حاليا ، سيتم ذلك في الاصدارات القادمة');
-define('LAN_FRONTPAGE_29', 'عرض أخر المقالات / الأخبار');
-define('LAN_FRONTPAGE_30', 'عرض اخر الصوتيات');
-define('LAN_FRONTPAGE_31', 'عرض الإعلانات');
-define('LAN_FRONTPAGE_32', 'عرض اخر المرئيات');
-define('LAN_FRONTPAGE_33', 'عرض اخر الفتاوى');
-define('LAN_FRONTPAGE_34', 'لا يوجد حاليا أي نص للمساعدة ، سيتم ذلك خلال الاصدارات القادمة');
-// define('LAN_FRONTPAGE_35', 'عدد الأخبار في الشريط  المتحرك - السلايدر');
-define('LAN_FRONTPAGE_36', 'عدد الأخبار في باقي الصفحة');
-define('LAN_FRONTPAGE_37', 'طريقة عرض الاخبار في الرئيسية');
-define('LAN_FRONTPAGE_38', 'افتراضي');
-define('LAN_FRONTPAGE_39', 'المجموعات');
-define('LAN_FRONTPAGE_39A', 'الثلاثيات (اليوم السابع)');
-define('LAN_FRONTPAGE_40', '----');
-define('LAN_FRONTPAGE_40A', 'المربعات');
-define('LAN_FRONTPAGE_41', 'كود الفيسبوك');
-define('LAN_FRONTPAGE_42', 'الأقسام التي ستعرض في الصفحة الرئيسية كبلوكات');
-define('LAN_FRONTPAGE_43', 'اظغط  هنا لاختيار جميع الأقسام');
-define('LAN_FRONTPAGE_44', 'عدد الأخبار في كل عمود  قسم');
-define('LAN_FRONTPAGE_45', 'عرض أخبار في خانات ثلاثية أعلى الصفحة');
-define('LAN_FRONTPAGE_46', 'عرض أخبار في خانات ثلاثية أسفل الصفحة');
-// define('LAN_FRONTPAGE_47', 'تعطيل البلوك');
-define('LAN_FRONTPAGE_48', 'إعدادات السلايدر');
-define('LAN_FRONTPAGE_49', 'نظام الشرائح (السايدرز - sliders)');
-define('LAN_FRONTPAGE_50', 'طريقة عرض الشرائح');
-define('LAN_FRONTPAGE_51', 'تعطيل');
-*/
-define("LAN_VIDEO_SHOW", "عدد المشاهدات");
-
-define("ADD_COMMENT", "أضف تعليقك");
-define("ADD_COMMENT_HEADER", "تعليقات الزوار");
-define("ADD_COMMENT_AUTHOR", "اسم كاتب التعليق *");
-define("ADD_COMMENT_SUBJECT", "عنوان التعليق");
-define("ADD_COMMENT_BODY", "التعليق *");
-define("ADD_COMMENT_CAPTCHA", "أكتب الرقم الذي تراه امامك");
-define("ADD_COMMENT_BUTTON", "أرسل التعليق");
 ?>

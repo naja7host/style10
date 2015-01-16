@@ -4,12 +4,12 @@ if (!defined('e107_INIT')) { exit; }
 	$rs = new form;	
 	
 	if (isset($_POST['frontpage_news_submit_ads'])) {
-		$pref['frontpage_ads_728x90'] = ($_POST['frontpage_ads_728x90'] ? $_POST['frontpage_ads_728x90'] : null) ;	
-		$pref['frontpage_ads_468x60'] = ($_POST['frontpage_ads_468x60'] ? $_POST['frontpage_ads_468x60'] : null) ;	
-		$pref['frontpage_ads_300x250'] = ($_POST['frontpage_ads_300x250'] ? $_POST['frontpage_ads_300x250'] : null) ;	
-		$pref['frontpage_ads_320x100'] = ($_POST['frontpage_ads_320x100'] ? $_POST['frontpage_ads_320x100'] : null) ;	
-		$pref['frontpage_ads_300x600'] = ($_POST['frontpage_ads_300x600'] ? $_POST['frontpage_ads_300x600'] : null) ;	
-		$pref['frontpage_ads_336x280'] = ($_POST['frontpage_ads_336x280'] ? $_POST['frontpage_ads_336x280'] : null) ;	
+		$pref['frontpage_ads_top'] = ($_POST['frontpage_ads_top'] ? $tp -> toDB($_POST['frontpage_ads_top']) : null) ;	
+		$pref['frontpage_ads_newstop'] = ($_POST['frontpage_ads_newstop'] ? $tp -> toDB($_POST['frontpage_ads_newstop']) : null) ;	
+		$pref['frontpage_ads_newsbottom'] = ($_POST['frontpage_ads_newsbottom'] ? $tp -> toDB($_POST['frontpage_ads_newsbottom']) : null) ;	
+		$pref['frontpage_ads_topside'] = ($_POST['frontpage_ads_topside'] ? $tp -> toDB($_POST['frontpage_ads_topside']) : null) ;		
+		$pref['frontpage_ads_leftfixed'] = ($_POST['frontpage_ads_leftfixed'] ? $tp -> toDB($_POST['frontpage_ads_leftfixed']) : null) ;	
+		$pref['frontpage_ads_rightfixed'] = ($_POST['frontpage_ads_rightfixed'] ? $tp -> toDB( $_POST['frontpage_ads_rightfixed']) : null) ;	
 		save_prefs();
 		$result_msg = LAN_FRONTPAGE_16;
 		$result = "			<div class='alert alert-block alert-success'>
@@ -36,15 +36,7 @@ if (!defined('e107_INIT')) { exit; }
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_728x90'>". $pref['frontpage_ads_728x90'] ."</textarea>
-						</div>
-					</div>
-					
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_03 ."</div>
-					<div class='form-group'>
-						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
-						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_468x60'>". $pref['frontpage_ads_468x60'] ."</textarea>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_top'>". $pref['frontpage_ads_top'] ."</textarea>
 						</div>
 					</div>
 					
@@ -52,7 +44,7 @@ if (!defined('e107_INIT')) { exit; }
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_300x250'>". $pref['frontpage_ads_300x250'] ."</textarea>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_topside'>". $pref['frontpage_ads_topside'] ."</textarea>
 						</div>
 					</div>
 					
@@ -60,7 +52,15 @@ if (!defined('e107_INIT')) { exit; }
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_320x100'>". $pref['frontpage_ads_320x100'] ."</textarea>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_newstop'>". $pref['frontpage_ads_newstop'] ."</textarea>
+						</div>
+					</div>
+					
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_03 ."</div>
+					<div class='form-group'>
+						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
+						<div class='col-sm-10'>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_newsbottom'>". $pref['frontpage_ads_newsbottom'] ."</textarea>
 						</div>
 					</div>
 					
@@ -68,7 +68,7 @@ if (!defined('e107_INIT')) { exit; }
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_300x600'>". $pref['frontpage_ads_300x600'] ."</textarea>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_leftfixed'>". $pref['frontpage_ads_leftfixed'] ."</textarea>
 						</div>
 					</div>
 															
@@ -76,7 +76,7 @@ if (!defined('e107_INIT')) { exit; }
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_336x280'>". $pref['frontpage_ads_336x280'] ."</textarea>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_rightfixed'>". $pref['frontpage_ads_rightfixed'] ."</textarea>
 						</div>
 					</div>
 

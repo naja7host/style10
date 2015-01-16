@@ -66,16 +66,20 @@ $register_sc[] = 'ADMINTOOLS';
 $register_sc[] = 'SOCIALICONS';
 $register_sc[] = 'BREAKINGNEWS';
 
+// Ads
+$register_sc[] = 'ADSTOP';
+$register_sc[] = 'ADSTOPSIDE';
+$register_sc[] = 'ADSNEWSTOP';
+$register_sc[] = 'ADSNEWBOTTOM';
+$register_sc[] = 'ADSLEFTFIXED';
+$register_sc[] = 'ADSRIGHTFIXED';
 
 // $register_sc[] = "TICKER";
 // $register_sc[] = 'TA7RIR';
 // $register_sc[] = 'CARICATURE';
 // $register_sc[] = 'PHOTOGRAPH';
 
-// Ads
 
-//$register_sc[] = 'ADS728';
-// $register_sc[] = 'ADS300X250';
 
 include('urlrewrite.php');
 include('functions.php');
@@ -129,6 +133,8 @@ $HEADERCALL = "
 {BREAKINGNEWS}
 <div class='container'>
 	<div class='nav-first-w'>
+		{ADSLEFTFIXED}
+		{ADSRIGHTFIXED}
 		<div class='nav-first'>			
 			<div class='col-md-6 nav-first-right hidden-xs hidden-sm'>
 			    {SOCIALICONS}                			
@@ -141,12 +147,12 @@ $HEADERCALL = "
 	</div>
 	<div class='clearfix'></div>
 	
-	<div class='col-md-12  logo-advert'>			
+	<div class='col-md-12  logo-advert'>
 		<div class='col-md-4  logo-header'>					
 		  ".$logo."
 		</div>
 		<div class='col-md-8 advert-header-728 hidden-xs hidden-sm'>
-		  {BANNER=campaign_one}
+			{ADSTOP}
 		</div>	
 		<div class='clearfix'></div>
 	</div>
@@ -169,9 +175,9 @@ $HEADER .= "	<div class='col-md-8 content'>" ;
 $FOOTER = "		</div>
 				<div class='col-md-4 sidebar'>
 					{SETSTYLE=menu}
-					{LAST24}
-					{MENU=1}
-					{BANNER=campaign_two}
+					{ADSTOPSIDE}
+					{LAST24}					
+					{MENU=1}					
 					{MENU=2}
 					{MENU=3}
 					{MENU=5}
@@ -248,7 +254,7 @@ $FOOTERINDEX = "
 				<div class='col-md-4 sidebar'>
 						{SETSTYLE=menu}
 						{MENU=1}
-						{BANNER=campaign_two}
+						{ADS300X250}
 						{MENU=2}
 						{MENU=3}
 						{MENU=5}
@@ -378,12 +384,16 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 			</ul>
 		</div>
 		
-		<div class='clearfix'>  </div>	
+		<div class='clearfix'>  </div>
     </div>	
-
+	
+	{ADSNEWSTOP}
+	
 	<div class='well'>	
-		<article>	
+		<article>
+			
 			<div class='alert title-news text-center'>
+				
 				<h1>{NEWSTITLE}</h1>
 			</div>
 			
@@ -401,7 +411,7 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 				{SHARE}
 				<div class='clearfix'>  </div>	
 			</div>
-			
+			{ADSNEWSBOTTOM}
 			{SHOURTURL}
 			
 		</article>	

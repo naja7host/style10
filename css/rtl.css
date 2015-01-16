@@ -11,6 +11,7 @@ html, body {
 .pull-left{float:right!important}
 .text-right {text-align: left;}
 .text-left {text-align: right;}
+
 /*** Header ***/
 .nav-first-w {}
 .nav-last-w {}
@@ -34,18 +35,18 @@ a.facebook , a.youtube ,a.rss  ,a.flicker ,a.twitter ,a.googleplus, a.skype {flo
 
 .ajil .breaknews{border-left:none ;border-right:5px solid #fff;}
 
-
 #Clock {text-align: right;}
 
 .content {/*float: right;*/ }
 .sidebar {float: left;}
 
+/*** Sliders ***/ 
 .slider-home {/*padding-left: 9px;padding-right: 0px;*/}
-.home-featured {float: right;}
+.home-featured {float: right;} /* Slider 6 */
 .left-slider{}
 #featured ul.ui-tabs-nav {right: 5px;}
 .mudule-tile-search a {padding: 0 16px 0 0;}
-
+ul.slider_nav li{float: right;} /* Slider 2 */
 
 .module-posts-1 ul {float: right;}
 .module-posts-1 li:first-child {float: right;margin-left: 10px;}
@@ -61,6 +62,6 @@ a.facebook , a.youtube ,a.rss  ,a.flicker ,a.twitter ,a.googleplus, a.skype {flo
 
 .news24 ul li span.date {float: right;margin: 0px 0px 0px 8px !important;}
 .more_news {float: left;}
-.module-border-2 .news_image  , .panel-body .news_image{float: right; }
+.module-border-2 .news_image  , .panel-body .news_image{float: right;}
 .colright {float: right;}
 .colleft {direction: rtl;display: inline;float: left;text-align: left;}

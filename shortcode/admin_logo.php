@@ -64,7 +64,7 @@ if (isset($_POST['frontpage_news_submit_upload']))
 			<input type='hidden' name='e-token' value='".e_TOKEN."' />
 			".$rs->form_close() .
 			
-			$rs->form_open("post", e_SELF."?pictures" ,  'frontpage_news_submit_upload', '', 'enctype="multipart/form-data"') ."
+			$rs->form_open("post", e_SELF."?logo" ,  'frontpage_news_submit_upload', '', 'enctype="multipart/form-data"') ."
 			<div class='panel panel-primary'>
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_LOGO_04 ."</div>										
 				<div class='panel-body'>										

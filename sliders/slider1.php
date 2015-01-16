@@ -64,8 +64,8 @@ else
 				<div class="pagination p1" id="paginate-slider1"></div>				
 			</div>
 		</div>	
-		<link rel="stylesheet" type="text/css" href="' . THEME . 'sliders/slider1/slidercss.css" />
-		<script type="text/javascript" src="' . THEME . 'sliders/slider1/contentslider.js" ></script>	
+		<link rel="stylesheet" type="text/css" href="' . THEME . 'sliders/slider1/slider.css" />
+		<script type="text/javascript" src="' . THEME . 'sliders/slider1/slider.js" ></script>	
 		<script type="text/javascript">ContentSlider("slider1", '. $vitese .')</script>
 	</div>
 	<div class="clearfix"></div><!-- End Slider -->		
