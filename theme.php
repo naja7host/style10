@@ -25,7 +25,7 @@ define("LOGOSTYLE", "style='width: 100%;'");
 
 
 	
-$themeversion = "2.6";
+$themeversion = "2.7";
 $themeauthor = "Naja7Host";
 $themedate = "03-12-2014";
 $themeinfo = "e107v7+";
@@ -135,7 +135,6 @@ function theme_head() {
 }
 
 $HEADERCALL = "
-
 {BREAKINGNEWS}
 <div class='container'>
 	<div class='nav-first-w'>

@@ -15,7 +15,7 @@ if (!defined('e107_INIT')) { exit; }
 		//echo $config['zip_url'] ;
 		$url = $config['zip_url'];
 		$stylename = $themerawname.".zip" ;
-		$path =  THEME ."update/" ;
+		$path =  THEME  ;
 
 		$headers = $style1->getHeaders($url);
 
