@@ -2,30 +2,17 @@
 	switch ($pref['frontpage_news_block2']) 
 	{
 		case '0' :
-			global $ns ;
-			$text = '
-			<script type="text/javascript"><!--
-			google_ad_client = "ca-pub-7107362594811938";
-
-			google_ad_slot = "6296793303";
-			google_ad_width = 300;
-			google_ad_height = 250;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-			';				
+			global $tp, $pref , $ns ;
+			$text = $tp->toHTML($pref['frontpage_ads_topside'], FALSE, 'nobreak, retain_nl, no_make_clickable, no_replace, emotes_off, no_hook');
 			$ns -> tablerender(LAN_THEME_34, $text);
 		break;
 		
 		case  '1' :	
 			echo "1";
-			return;				
+			return;
 		break;	
 		
 		case  '2' :
-			//echo "2";
 			require_once(e_HANDLER."news_class.php");	
 			global $ns , $ix ;
 			$ix = new news;

@@ -32,7 +32,7 @@ if (!defined('e107_INIT')) { exit; }
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_8 ."</div>							
 				<div class='panel-body'>
 					". $rs->form_open("post", e_SELF."?ads" ,  'frontpage_news_submit_ads', '', 'enctype="multipart/form-data"' , "class='form-horizontal'") ."	
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_02 ."</div>
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_02 . LAN_THEME_ADS_02A ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
@@ -40,15 +40,7 @@ if (!defined('e107_INIT')) { exit; }
 						</div>
 					</div>
 					
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_04 ."</div>
-					<div class='form-group'>
-						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
-						<div class='col-sm-10'>
-							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_topside'>". $pref['frontpage_ads_topside'] ."</textarea>
-						</div>
-					</div>
-					
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_05 ."</div>
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_04 . LAN_THEME_ADS_04A ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
@@ -56,7 +48,7 @@ if (!defined('e107_INIT')) { exit; }
 						</div>
 					</div>
 					
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_03 ."</div>
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_05 ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
@@ -64,7 +56,15 @@ if (!defined('e107_INIT')) { exit; }
 						</div>
 					</div>
 					
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_06 ."</div>
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_03 . LAN_THEME_ADS_03A ."</div>
+					<div class='form-group'>
+						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
+						<div class='col-sm-10'>
+							<textarea class='form-control textarea-code' cols='70' rows='6' id='css' name='frontpage_ads_topside'>". $pref['frontpage_ads_topside'] ."</textarea>
+						</div>
+					</div>
+					
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_06 . LAN_THEME_ADS_06A ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>
@@ -72,7 +72,7 @@ if (!defined('e107_INIT')) { exit; }
 						</div>
 					</div>
 															
-					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_07 ."</div>
+					<div class='alert alert-warning'>". LAN_THEME_ADS_01 . LAN_THEME_ADS_07 . LAN_THEME_ADS_07A ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_ADS_01 ."</label>
 						<div class='col-sm-10'>

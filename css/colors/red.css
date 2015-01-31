@@ -18,6 +18,8 @@ a:hover , a:focus {}
 .nav-last {}
 .nav-last > .nav > li:first-child {background: none repeat scroll 0 0 #ca0002;}
 .nav-last > .nav > li:hover, .nav-last > .nav li.sfHover, .nav-last > .nav a:focus, .nav-last > .nav a:hover, .nav-last > .nav a:active {background: #ca0002;}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {color: #FFF;background-color: #ca0002;}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .active > a {background-image: linear-gradient(to bottom, #ca0002 0px, #ca0002 100%);}
 
 /*** main Page ***/
 .mudule-tile-search {background: url("../../images/title_bg.png") no-repeat right #ca0002 ;}
@@ -61,12 +63,13 @@ li .thumbnail:hover {background:#ca0002;}
 .footerlinks h4{border-bottom: 2px solid #FF4C4C ;}
 
 /*** left-side admin ***/
+/*
 .notification {background-color: #FA603D;background-image: -moz-linear-gradient(center top , #FB9C87, #FA5F3D);border-color: #FA5833;}
 #ta-Settings span {background: url("../../images/icons-blue32.png") transparent;background-position: 0px -192px;}
 #ta-comments span {background: url("../../images/icons-blue32.png") transparent;background-position: -223px -256px;}
 #ta-Settings span:hover {background: url("../../images/icons-darkgray32.png") transparent;background-position: 0px -192px;}
 #ta-comments span:hover {background: url("../../images/icons-darkgray32.png") transparent;background-position: -223px -256px;}
-
+*/
 /*** Buttons ***/
 .button , .btn-send {
   color: #ffffff;

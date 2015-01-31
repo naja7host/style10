@@ -41,8 +41,6 @@
 .news_headlines .news_list li a {border-right: 3px solid rgb(204, 212, 220);font-size: 0.99em;}
 .news_headlines .headline, .news_headlines .news_list li a, header .subnav li a {text-shadow: 1px 1px 0px rgb(255, 255, 255), 1px 1px 3px rgb(178, 185, 193);}
 
-
-
 .news_headlines .headline, .news_headlines .news_list li {background-image: url("repeat_bg.png");background-repeat: repeat-x;}
 
 

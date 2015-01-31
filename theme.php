@@ -25,7 +25,7 @@ define("LOGOSTYLE", "style='width: 100%;'");
 
 
 	
-$themeversion = "2.0";
+$themeversion = "2.6";
 $themeauthor = "Naja7Host";
 $themedate = "03-12-2014";
 $themeinfo = "e107v7+";
@@ -70,7 +70,7 @@ $register_sc[] = 'BREAKINGNEWS';
 $register_sc[] = 'ADSTOP';
 $register_sc[] = 'ADSTOPSIDE';
 $register_sc[] = 'ADSNEWSTOP';
-$register_sc[] = 'ADSNEWBOTTOM';
+$register_sc[] = 'ADSNEWSBOTTOM';
 $register_sc[] = 'ADSLEFTFIXED';
 $register_sc[] = 'ADSRIGHTFIXED';
 
@@ -105,45 +105,53 @@ function theme_head() {
 		";
 		
 	if(defined("TEXTDIRECTION"))
-		$headerstyle .= "<link href='".THEME_ABS."css/".TEXTDIRECTION."bootstrap.min.css' rel='stylesheet'  media='screen' />";
+		$headerstyle .= "
+		<link href='".THEME_ABS."css/".TEXTDIRECTION."bootstrap.min.css' rel='stylesheet'  media='screen' />";
 
 		
 	if(defined("COLORSTYLE"))
-		$headerstyle .= "<link href='".THEME_ABS."css/colors/".COLORSTYLE.".css' rel='stylesheet' />";	
+		$headerstyle .= "
+		<link href='".THEME_ABS."css/colors/".COLORSTYLE.".css' rel='stylesheet' />";	
 		
 	if(defined("FONTS"))
-		$headerstyle .= "<link href='".THEME_ABS."css/fonts/".FONTS.".css' rel='stylesheet' />";			
+		$headerstyle .= "
+		<link href='".THEME_ABS."css/fonts/".FONTS.".css' rel='stylesheet' />";			
 		
 	if(defined("TEXTDIRECTION"))
-		$headerstyle .= "<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
+		$headerstyle .= "
+		<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
 
 	if(file_exists(THEME."css/custom.css"))
-		$headerstyle .= "<link href='".THEME_ABS."css/custom.css' rel='stylesheet' />";
+		$headerstyle .= "
+		<link href='".THEME_ABS."css/custom.css' rel='stylesheet' />";
 
 		
-	$headerstyle .= "
-	<script type='text/javascript' src='".THEME_ABS."js/jquery.min.js'></script>
-	<script type='text/javascript' src='".THEME_ABS."js/jquery-ui.min.js'></script>
-	";
+		$headerstyle .= "
+		<script type='text/javascript' src='".THEME_ABS."js/jquery.min.js'></script>
+		<script type='text/javascript' src='".THEME_ABS."js/jquery-ui.min.js'></script>	";
+	
 	if(!stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'admin-theme.php') == TRUE)
 		return $headerstyle;
 }
 
 $HEADERCALL = "
+
 {BREAKINGNEWS}
 <div class='container'>
 	<div class='nav-first-w'>
 		{ADSLEFTFIXED}
 		{ADSRIGHTFIXED}
-		<div class='nav-first'>			
-			<div class='col-md-6 nav-first-right hidden-xs hidden-sm'>
-			    {SOCIALICONS}                			
+		
+		<div class='nav-first '>
+			<div class='col-md-6 nav-first-right hidden-xs hidden-sm row'>
+			     {LINKSTYLE=topnav2}{SITELINKS=flat:2}              			
 			</div>
 
-			<div class='col-md-6 search'>
-			    {SEARCH}
+			<div class='col-md-6 social'>
+			    {SOCIALICONS}
 			</div>
 		</div>
+		<div class='clearfix'></div>
 	</div>
 	<div class='clearfix'></div>
 	
@@ -181,6 +189,7 @@ $FOOTER = "		</div>
 					{MENU=2}
 					{MENU=3}
 					{MENU=5}
+					{FACEBOOK}
 				</div>
 			</div>
 		</div>
@@ -254,10 +263,11 @@ $FOOTERINDEX = "
 				<div class='col-md-4 sidebar'>
 						{SETSTYLE=menu}
 						{MENU=1}
-						{ADS300X250}
+						{ADSTOPSIDE}
 						{MENU=2}
 						{MENU=3}
 						{MENU=5}
+						{FACEBOOK}
 				</div>
 				<div class='clearfix'></div>
 				
@@ -384,7 +394,7 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 			</ul>
 		</div>
 		
-		<div class='clearfix'>  </div>
+		<div class='clearfix'></div>
     </div>	
 	
 	{ADSNEWSTOP}
@@ -405,13 +415,15 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 			</div>
 
 			<p class='text-justify'>{NEWSBODY}</p>
-			<div class='clearfix'>  </div>	
+			<div class='clearfix'>  </div>
+			
+			{ADSNEWSBOTTOM}
 			
 			<div class='alert title-news'>
 				{SHARE}
 				<div class='clearfix'>  </div>	
 			</div>
-			{ADSNEWSBOTTOM}
+			
 			{SHOURTURL}
 			
 		</article>	
@@ -454,107 +466,77 @@ global $style ;
 		echo "
 			<div style='margin:0px auto;'>
 				<div id='amazingcarousel-container-1'>
-				<div class='title_def'>
-					<div class='mudule-tile-search'>
-
-					".$caption."
+					<div class='title_def'>
+						<div class='mudule-tile-search'>".$caption."</div>					
 					</div>
-					
-				</div>				
-				<div id='amazingcarousel-1'>		
-					<div class='amazingcarousel-list-container'>
-							<ul class='amazingcarousel-list'>
-							".$text."
-							</ul>
-						<div class='amazingcarousel-prev'></div>
-						<div class='amazingcarousel-next'></div>
+					<div id='amazingcarousel-1'>
+						<div class='amazingcarousel-list-container'>
+								<ul class='amazingcarousel-list'>
+								".$text."
+								</ul>
+							<div class='amazingcarousel-prev'></div>
+							<div class='amazingcarousel-next'></div>
+						</div>
 					</div>
-				</div>
 				</div>
 			</div>
-			<div class='amazingcarousel-nav'></div>			
-		";			
-		return;		
-		break;	
+			<div class='amazingcarousel-nav'></div>";
+		return;
+		break;
 		
 		case 'newsindex_3col':
 		echo "
-		<div class='module-border-2'>
-			<div class='mudule-tile-search'>
-				".$caption."
-			</div>
-			".$text."
-			
-			<div class='clearfix'></div>
-		</div>
-		";			
-		return;		
-		break;	
+			<div class='module-border-2'>
+				<div class='mudule-tile-search'>".$caption."</div>
+				".$text."			
+				<div class='clearfix'></div>
+			</div>";			
+		return;
+		break;
 		
 		case 'newsindex':
 		echo "
 			<div class='module-border-2'>
-			<div class='mudule-tile-search2'>
-				".$caption."
-			</div>
-			
-			".$text."
-			
-			<div class='clearfix'></div>
-		</div>
-		";			
+				<div class='mudule-tile-search2'>".$caption."</div>			
+				".$text."			
+				<div class='clearfix'></div>
+			</div>";
 		return;		
-		break;		
+		break;
 		
 		case 'lastblock':
 		echo "
 			<div class='module-border-2'>
-			<div class='mudule-tile-search1'>
-				".$caption."
-			</div>
-			".$text."
-			
-			<div class='clearfix'></div>
-		</div>
-		";			
-		return;		
-		break;		
+				<div class='mudule-tile-search1'>".$caption."</div>
+				".$text."
+				<div class='clearfix'></div>
+			</div>";			
+		return;
+		break;
 				
-		
-		
 		case 'no_caption' :
-			echo $text;
+		case 'clock' :
+		echo $text;
 		return;	
 		break;
 		
-			case 'no-text' :
-				echo $caption;
-				
-		
+		case 'no-text' :
+		echo $caption;		
 		return;	
-		break;
-		
-		case  'clock' :
-			echo $text;	
-		return;				
 		break;
 		
 		case 'facebook':
 		echo "
-		<div class='row'>			
+			<div class='row'>			
 				<h4 class='widget-facebook'>".$caption."</h4>			
-			<div class='border_box ads'>				
-				".$text."
-			</div>			
-			<div class='clearfix'></div>
-		</div>
-		<div class='clearfix'></div>";	
+				<div class='border_box ads'>				
+					".$text."
+				</div>			
+				<div class='clearfix'></div>
+			</div>
+			<div class='clearfix'></div>";	
 		return;				
-		break;		
-
-
-		
-	
+		break;
 	}
 	
 	switch ($style) 
@@ -562,21 +544,21 @@ global $style ;
 
 		case 'facebook':
 		echo "
-		<div class='row'>			
+			<div class='row'>			
 				<div class='widget-facebook'><h4 >".$caption."</h4></div>		
-			<div class='border_box ads'>				
-				".$text."
-			</div>			
-			<div class='clearfix'></div>
-		</div>
-		<div class='clearfix'></div>";		
+				<div class='border_box ads'>				
+					".$text."
+				</div>			
+				<div class='clearfix'></div>
+			</div>
+			<div class='clearfix'></div>";		
 		break;				
 		case 'menu':
 		echo "
 			<div class='sidebar-wrapper module-border-2'>
 				<div class='title_box'>
-					   <h4>".$caption."</h4>
-					</div>
+					<h4>".$caption."</h4>
+				</div>
 				<div class='sidebar-content'>				
 					".$text."
 					<div class='clearfix'></div>
@@ -588,10 +570,9 @@ global $style ;
 		echo "
 			<div class='footer-blocks footerlinks'>
 				<h4>".$caption."</h4>
-					".$text."
+				".$text."
 			</div>";		
 		break;
-		
 		
 		
 		case 'photo':
@@ -613,20 +594,17 @@ global $style ;
 					</div>
 				</div>";
 		break;
-		
+
 		default:
 		echo "
-		<div class='single-post module-border-2'>
-					<div class='title_box'>
-					   <h4>".$caption."</h4>
-					</div>
-					
-					<div class='sidebar-content'>				
+			<div class='single-post module-border-2'>
+				<div class='title_box'>
+					<h4>".$caption."</h4>
+				</div>
+				<div class='sidebar-content'>				
 					".$text."
 					<div class='clearfix'></div>
-				</div>			
-			
-			
+				</div>
 			</div>";			
 		break;
 	}	
@@ -652,7 +630,7 @@ function linkstyle($np_linkstyle)
 	{
 		case 'topnav':
 			$linkstyleset['linkdisplay']      = 1;
-			$linkstyleset['prelink'] = "<ul class='nav '>";
+			$linkstyleset['prelink'] = "<ul class='nav navbar-nav'>";
 			$linkstyleset['postlink'] = "</ul>";
 			// parent normal links
 			$linkstyleset['linkstart'] = "<li>";
@@ -683,14 +661,32 @@ function linkstyle($np_linkstyle)
 		
 		case 'topnav2':
 			$linkstyleset['linkdisplay']      = 1;
-			$linkstyleset['prelink'] = "<ul id='menu- ' class='menu-category'>";
+			$linkstyleset['prelink'] = "<ul class='nav nav-pills '>";
 			$linkstyleset['postlink'] = "</ul>";
-			$linkstyleset['linkstart'] = "<li class='menu-item'>"; 
+			// parent normal links
+			$linkstyleset['linkstart'] = "<li>";
+			$linkstyleset['linkstart_hilite'] = "<li class='active'>  "; // css style
 			$linkstyleset['linkend'] = "</li>";
-			$linkstyleset['linkstart_hilite'] = '<li class="current-menu-item">';
-			$linkstyleset['linkclass_hilite'] = "";
-			$linkstyleset['linkseparator'] = ""; //
-			$linkstyleset['sublinkclass'] = "<ul class='sub-menu'>";
+
+			// parent link with sublinks
+			$linkstyleset['linkstart_dropdown'] = "<li class='dropdown'>"; // css style
+			$linkstyleset['linkstart_dropdown_hilite'] = "<li class='active dropdown'>"; // css style
+			$linkstyleset['linkstart_dropdown_end'] = "</li>";
+			$linkstyleset['linkstart_dropdown_prefix'] = " class='dropdown-toggle' data-toggle='dropdown' role='button' aria-expanded='false' ";
+			$linkstyleset['linkstart_dropdown_suffix'] = "  <span class='caret'>";
+
+			$linkstyleset['linkseparator'] = "";
+			// sublinks styes
+			$linkstyleset['subprelink'] = "<ul class='dropdown-menu' role='menu' >";
+			$linkstyleset['subpostlink'] = "</ul>";
+			$linkstyleset['sublinkstart'] = "<li>";
+			$linkstyleset['sublinkend'] = "</li>";
+			
+			$linkstyleset['subsublinkstart'] = "<li class='dropdown-submenu'>";
+			$linkstyleset['subsublinkend'] = "</li>";			
+			
+			$linkstyleset['sublinkclass'] = "";
+			$linkstyleset['subindent'] = "";
 		break;	
 
 		

@@ -23,7 +23,7 @@
 .news-extended-category-link:hover, .news-extended-overview-link:hover , .news-extended-older  a:hover , .news-extended-newer a:hover , .news-back-overview:hover{background-color: rgb(153, 153, 153);}
 .news-back-overview {border-top: 1px solid #eef1f5;bottom: 0;float: right;padding: 8px 0;text-align: center;width: 100%;}
 .searchhighlight{text-decoration: underline;cursor:pointer;}
-.button{}
+.button{font-weight: bold;width:50%;}
 .defaulttext{}
 .fborder{}
 .fcaption{}

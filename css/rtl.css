@@ -14,13 +14,16 @@ html, body {
 
 /*** Header ***/
 .nav-first-w {}
+.nav-first-w .nav-pills > li > a {border-right: 0px;border-left:1px solid #000;}
 .nav-last-w {}
 .nav-first {}
-.nav-first-right{float:right;}
+.nav-first-right{float:right;/*padding-right: 0px;*/}
 .nav-first-left {float: left;text-align:right;}
-.socialsite {float: right;}
+.socialsite {float: left;}
 .socialsite li {float: right;}
 .socialsite li.follow {}
+ul.admin-side {direction:ltr;}
+.notification {}
 a.facebook , a.youtube ,a.rss  ,a.flicker ,a.twitter ,a.googleplus, a.skype {float: right;}
 
 .search form {float: left;margin-right: 43%;margin-left: 0px;}
@@ -62,6 +65,9 @@ ul.slider_nav li{float: right;} /* Slider 2 */
 
 .news24 ul li span.date {float: right;margin: 0px 0px 0px 8px !important;}
 .more_news {float: left;}
-.module-border-2 .news_image  , .panel-body .news_image{float: right;}
+.module-border-2 .news_image  , .panel-body .news_image{float: right;margin-right: 0px;}
 .colright {float: right;}
 .colleft {direction: rtl;display: inline;float: left;text-align: left;}
+
+/*** video ***/
+#amazingcarousel-1 .amazingcarousel-item {float:right}

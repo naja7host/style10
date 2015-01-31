@@ -77,17 +77,24 @@ define("LAN_THEME_LINKS_04", "اختيار أقسام الأخبار التي س
 define("LAN_THEME_LINKS_05", "الروابط يمكنك التحكم فيها من ");
 define("LAN_THEME_LINKS_06", "الرابط  التالي");
 define("LAN_THEME_LINKS_07", "ما يعرض في القائمة الرئيسية بالأعلى");
-define("LAN_THEME_LINKS_08", "عرض روابط  الموقع - النوع الأول -");
-define("LAN_THEME_LINKS_09", "عرض أقسام الاخبار");
+define("LAN_THEME_LINKS_08", "عرض أقسام الاخبار");
+define("LAN_THEME_LINKS_09", "عرض روابط  الموقع - النوع الأول -");
 
 // ADS PAGE
 define("LAN_THEME_ADS_01", "ضع كود الإعلان");
 define("LAN_THEME_ADS_02", " - أعلى الصفحة أمام  اللوجو - ");
+define("LAN_THEME_ADS_02A", "غالبا مقاس  728x90");
 define("LAN_THEME_ADS_03", " - أعلى الجهة اليسرى - ");
+define("LAN_THEME_ADS_03A", "غالبا مقاس  300x250");
 define("LAN_THEME_ADS_04", " - بداية الخبر - ");
+define("LAN_THEME_ADS_04A", "غالبا مقاس  728x90");
 define("LAN_THEME_ADS_05", " - نهاية الخبر - ");
+define("LAN_THEME_ADS_05A", "غالبا مقاس  728x90");
 define("LAN_THEME_ADS_06", " - إعلان ثابت بالجهة اليمنى - ");
+define("LAN_THEME_ADS_06A", "غالبا مقاس  160x600");
 define("LAN_THEME_ADS_07", " - إعلان ثابت بالجهة اليسرى - ");
+define("LAN_THEME_ADS_07A", "غالبا مقاس  160x600");
+
 
 // CATNEWS PAGE
 

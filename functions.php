@@ -256,6 +256,74 @@ class style1 {
 	}	
 }
 
+function check_new_update() 
+{
+	global $pref , $themeversion, $themerawname  ;
+
+	$update = "";
+		
+	if(is_writable(THEME."cache"))
+	{
+		$disabled ="" ;
+		$writeable_message ="";
+	} 
+	else 
+	{
+		$disabled =" disabled='disabled'" ;
+		$writeable_message ="
+							<tr class='warning'>
+								<td>". LAN_THEME_ADMIN_WARNING ."	</td>
+								<td>". LAN_THEME_UPDATE_02 . THEME_ABS . LAN_THEME_UPDATE_03 ."</td>
+							</tr>";
+	}	
+	
+	// 
+	$raw_response =  file_get_contents("https://raw.githubusercontent.com/naja7host/$themerawname/master/README.md");
+	
+	if ( !$raw_response  )
+		return $version = "	$writeable_message
+							<tr class='danger' >
+								<td>". LAN_THEME_UPDATE_03."	</td>
+								<td>N/A</td>
+							</tr>";
+
+	preg_match( '#^\s*`*~Current Version\:\s*([^~]*)~#im', $raw_response, $__version );
+
+	if ( isset( $__version[1] ) ) {
+		$version_readme = $__version[1];
+		if (-1 == version_compare( $themeversion, $version_readme ) ) 
+		{
+			$class ="class='success'";
+			$version = $version_readme;
+			
+			$update ="			
+								<button class='btn btn-primary button-save btn-xs' $disabled  name='frontpage_news_submit_update_theme'>
+									<span class='glyphicon glyphicon-import'></span>
+									<span class='hidden-phone'>". LAN_THEME_UPDATE_05 ."</span>
+								</button>";												
+		}
+		else 
+		{
+			$class ="";
+			$version = $version_readme;
+			$update ="			<button class='btn btn-default button-save btn-xs'  disabled='disabled' name='frontpage_news_submit_update_theme'>
+									<span class='glyphicon glyphicon-stop'></span>
+									<span class='hidden-phone'>". LAN_THEME_UPDATE_05 ."</span>
+								</button>";
+		}			
+	}
+
+	// Refresh every 6 hours
+	// To be Added next release
+	
+	return "				$writeable_message
+							<tr ".$class.">
+								<td>". LAN_THEME_UPDATE_04 ."	</td>
+								<td>". $version . $update ."</td>
+							</tr>
+							
+							";
+}	
 
 if ($pref['frontpage_news_fonts'])
 	define('FONTS', $pref['frontpage_news_fonts']);
