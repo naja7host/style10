@@ -51,6 +51,8 @@ a.facebook , a.youtube ,a.rss  ,a.flicker ,a.twitter ,a.googleplus, a.skype {flo
 .mudule-tile-search a {padding: 0 16px 0 0;}
 ul.slider_nav li{float: right;} /* Slider 2 */
 
+
+
 .module-posts-1 ul {float: right;}
 .module-posts-1 li:first-child {float: right;margin-left: 10px;}
 .module-posts-1 li:first-child .thumbnail {float: right;/*padding-left: 10px;*/}

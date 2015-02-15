@@ -19,27 +19,27 @@ if (!defined('e107_INIT')) { exit; }
 
 		$headers = $style1->getHeaders($url);
 
-		
+		// print_r( $headers) ;
 		if ($headers['http_code'] === 200 ) {	
 			if ($style1->download_file($url, $path.$stylename)){
-				$result_msg .= 'Download complete!';
+				$result_msg .= LAN_THEME_UPDATE_08 ;
 			}
 				require_once(e_HANDLER."pclzip.lib.php");
 				$archive = new PclZip($path . $stylename);
 				$unarc = ($fileList = $archive -> extract(PCLZIP_OPT_PATH, $path , PCLZIP_OPT_SET_CHMOD, 0666, PCLZIP_OPT_REMOVE_PATH, $themerawname."-master" , PCLZIP_OPT_REPLACE_NEWER));	  
 					if(!$unarc) {					
-						$result_msg .= " '".$archive -> errorName(TRUE)."'";
+						$result_msg .= "Can't UNRAR '" .$archive->errorName(TRUE). "'";
 						$result_class .= "alert-danger";
 					}
 					else 
 					{	
-						$result_msg .= LAN_THEME_ADMIN_91;
+						$result_msg .= LAN_THEME_UPDATE_07 ;
 						$result_class .= "alert-success";
 					}				
 		} 
 		else 	
 		{
-			$result_msg .= " '".$archive -> errorName(TRUE)."'";
+			$result_msg .= LAN_THEME_UPDATE_06 ;
 			$result_class .= "alert-danger";	
 		}
 		
@@ -64,7 +64,7 @@ if (!defined('e107_INIT')) { exit; }
 			'api_url' => 'https://api.github.com/repos/naja7host/'.$themerawname ,
 			'raw_url' => 'https://raw.github.com/naja7host/'.$themerawname .'/master',
 			'github_url' => 'https://github.com/naja7host/'.$themerawname ,
-			'zip_url' => 'https://github.com/naja7host/'.$themerawname .'/archive/master.zip',
+			'zip_url' => 'https://codeload.github.com/naja7host/'.$themerawname .'/zip/master',
 			'readme' => 'README.md',
 		);
 		return $config ; 

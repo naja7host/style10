@@ -30,11 +30,8 @@ else
 	
 	$newsList = $sql->db_getList();
 	$idnews = array();
-	$text = '
-	<div class=" slideindex">		
-		<div class="contentslide c1" id="slider1">
-			<div class="opacitylayer">	
-	' ;
+	$text = '<div id="banner-slide">
+				<ul class="bjqs">' ;
 
 	$count = 0;
 	// do
@@ -45,13 +42,12 @@ else
 		{	
 			$idnews[] = $row['news_id'];
 			$NEWSLISTSTYLE1 = "
-				<div class='contentdiv'>
+				<li>
 					<h3>{NEWSTITLELINK}</h3>
-					{NEWSIMAGE}
-					<div class='headline_body' >
-						{NEWSBODY=120}{EXTENDED}	
-					</div>
-				</div>			
+					
+					{NEWSIMAGE}<p class='bjqs-caption'>{NEWSBODY=200}{EXTENDED}</p>
+					
+				</li>			
 			" ;		
 			$count++;
 			if ($count <= $pref['frontpage_news_slider'])
@@ -60,16 +56,19 @@ else
 		}	
 	// } while($count < $pref['frontpage_news_slider']); 	
 	
-	$text .= '
-				<div class="pagination p1" id="paginate-slider1"></div>				
+	$text .= "	</ul>
 			</div>
-		</div>	
-		<link rel="stylesheet" type="text/css" href="' . THEME . 'sliders/slider1/slider.css" />
-		<script type="text/javascript" src="' . THEME . 'sliders/slider1/slider.js" ></script>	
-		<script type="text/javascript">ContentSlider("slider1", '. $vitese .')</script>
-	</div>
-	<div class="clearfix"></div><!-- End Slider -->		
-	' ;	
+			<script class='secret-source'>
+			jQuery(document).ready(function($) {
+				$('#banner-slide').bjqs({
+					animtype : 'fade',
+					width : 800,
+					height : 460,
+					showcontrols: false,
+					responsive : true
+				});
+			});
+			</script>" ;	
 	
 	$ns->tablerender($news_cap, $text, "no_caption");
 	unset($vitese);

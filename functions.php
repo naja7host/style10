@@ -392,9 +392,9 @@ else
 	define('COLORSTYLE', "blue");
 
 if($pref['frontpage_news_logo'])
-	$logo = "<a href='".e_HTTP."'><img ".LOGOSTYLE." src='".THEME_ABS."images/logo".$pref['frontpage_news_logo']."' alt='{SITENAME}' /></a><br style='clear:both' />";
+	$logo = "<a href='".e_HTTP."'><img src='".THEME_ABS."images/logo".$pref['frontpage_news_logo']."' ".LOGOSTYLE." alt='{SITENAME}' /></a>";
 else	
-	$logo = "<a href='".e_HTTP."'><img ".LOGOSTYLE." src='".THEME_ABS."images/logo/logo.png' alt='{SITENAME}' /></a><br style='clear:both' />";
+	$logo = "<a href='".e_HTTP."'><img src='".THEME_ABS."images/logo/logo.png' ".LOGOSTYLE." alt='{SITENAME}' /></a>";
 
 if($pref['frontpage_news_slider'])
 	$totalnews = $pref['frontpage_news_slider'] ;

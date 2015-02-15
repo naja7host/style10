@@ -1,4 +1,10 @@
 <?php
+	
+if ($pref['frontpage_news_silder1_vit'])
+	$vitese = $pref['frontpage_news_silder1_vit'];
+else 
+	$vitese = "5000";	
+	
 	global $tp , $ns, $totalnews , $showdate , $idnews ;
 	
 	require_once(e_HANDLER."news_class.php");			
@@ -24,55 +30,47 @@
 	
 	$newsList = $sql->db_getList();
 	$idnews = array();
-	$ilactive = "class='active'";
-	$active = "active";
-	$text = '
-	<!-- Main Slider -->
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" ></script>  
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script> 
-	
-	<div id="featured" >';		
-	$textol ="" ; 
-	$textinner = "<ul class='ui-tabs-nav'>" ; 
-	$count = 0; 
+	$text = '<div id="banner-slide">
+				<ul class="bjqs">' ;
+
+	$count = 0;
+	// do
+	// {
+		// 
 		foreach($newsList  as $row )
+		// while (list($key, $row) = each($newsList)) 
 		{	
-			$url = make_url($row);
 			$idnews[] = $row['news_id'];
-			if ($count == 0 ){
-				$style = ""; 
-				$class = "class='active'";
-				}
-			else {
-				$style = "style='display:none;'";
-				$class ="";
-				}
 			$NEWSLISTSTYLE1 = "
-					<div id='fragment-$count' class='ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide' style='' >
-						{NEWSIMAGE=&amp;h=280&amp;w=348&amp;zc=1}
-						<div class='info '><h4>{NEWSTITLELINK=80}</h4>
-						{NEWSBODY=70}{EXTENDED}
-						</div>
-						<div></div>
-						<div class='cats cat-".$row['news_category']."'>{NEWSCATEGORY}</div>
-					</div>";
-			$textol .= $ix->render_newsitem($row, 'return', '', $NEWSLISTSTYLE1, $param);		
-			
-			$NEWSLISTSTYLE2 ="	<li id='nav-fragment-$count' class='ui-tabs-nav-item ui-tabs-selected' ><a href='#fragment-$count'>$count</a></li>";
-			$textinner .= $ix->render_newsitem($row, 'return', '', $NEWSLISTSTYLE2, $param);
-			$count++;				
-		}
+				<li>
+					<h3>{NEWSTITLELINK}</h3>
+					
+					{NEWSIMAGE}<p class='bjqs-caption'>{NEWSBODY=200}{EXTENDED}</p>
+					
+				</li>			
+			" ;		
+			$count++;
+			if ($count <= $pref['frontpage_news_slider'])
+				$text .= $ix->render_newsitem($row, 'return', '', $NEWSLISTSTYLE1, $param);
+
+		}	
+	// } while($count < $pref['frontpage_news_slider']); 	
 	
-	$textol .= "<div class='clear'></div>";
-	$textinner .= "<div class='clear'></div>" ;
-	$texttext .= '</ul>
-	</div>
-	<script type="text/javascript">var $j=jQuery.noConflict();$j(document).ready(function(){$j("#featured").tabs({fx:{opacity:"toggle",easing:"swing"}}).tabs("rotate",5000,true);});</script>
-	' ;	
-	$text .= $textol ;
-	$text .= $textinner ;
-	$text .= $texttext ;
+	$text .= "	</ul>
+			</div>
+			<script class='secret-source'>
+			jQuery(document).ready(function($) {
+				$('#banner-slide').bjqs({
+					animtype : 'fade',
+					width : 800,
+					height : 460,
+					showcontrols: false,
+					responsive : true
+				});
+			});
+			</script>" ;	
 	
 	$ns->tablerender($news_cap, $text, "no_caption");
+	unset($vitese);
 	unset($text);
 ?>

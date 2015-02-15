@@ -13,7 +13,7 @@
 	WHERE n.news_class REGEXP '".e_CLASS_REGEXP."' AND NOT (n.news_class REGEXP ".$nobody_regexp.")
 	AND n.news_start < ".time()." AND (n.news_end=0 || n.news_end>".time().")
 	AND n.news_render_type<2
-	ORDER BY n.news_sticky DESC, ".$order." DESC LIMIT ".intval($newsfrom).",7";
+	ORDER BY n.news_sticky DESC, ".$order." DESC LIMIT ".intval($newsfrom).",".$pref['frontpage_news_slider'];
 	
 	$sql->db_Select_gen($query);
 

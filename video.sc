@@ -79,7 +79,7 @@ if (isset($pref['plug_installed']['ytm_gallery']))
 					<li class='amazingcarousel-item'>
 						<div class='amazingcarousel-item-container'>
 						   <div class='amazingcarousel-image'>
-								<a href='" . e_PLUGIN."ytm_gallery/ytm.php?view=$movie_code' title='$movie_title'  class='html5lightbox'>
+								<a href='http://www.youtube.com/embed/$movie_code' title='$movie_title'  class='html5lightbox'>
 								  <img src='http://i.ytimg.com/vi/$movie_code/0.jpg' alt='$movie_title' />
 								</a>
 						   </div>

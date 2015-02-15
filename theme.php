@@ -17,7 +17,7 @@ include_lan(THEME."languages/".e_LANGUAGE.".php");
 
 
 define("STANDARDS_MODE", TRUE);
-define("LOGOSTYLE", "style='width: 100%;'");
+define("LOGOSTYLE", " class='logo' ");
 
 
 //$row['news_allow_comments'] = 0;
@@ -25,7 +25,7 @@ define("LOGOSTYLE", "style='width: 100%;'");
 
 
 	
-$themeversion = "2.7";
+$themeversion = "2.8";
 $themeauthor = "Naja7Host";
 $themedate = "03-12-2014";
 $themeinfo = "e107v7+";
@@ -117,14 +117,6 @@ function theme_head() {
 		$headerstyle .= "
 		<link href='".THEME_ABS."css/fonts/".FONTS.".css' rel='stylesheet' />";			
 		
-	if(defined("TEXTDIRECTION"))
-		$headerstyle .= "
-		<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
-
-	if(file_exists(THEME."css/custom.css"))
-		$headerstyle .= "
-		<link href='".THEME_ABS."css/custom.css' rel='stylesheet' />";
-
 		
 		$headerstyle .= "
 		<script type='text/javascript' src='".THEME_ABS."js/jquery.min.js'></script>
@@ -133,6 +125,21 @@ function theme_head() {
 	if(!stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'admin-theme.php') == TRUE)
 		return $headerstyle;
 }
+
+function theme_footer() {
+	
+	$footerstyle = "";
+
+	if(defined("TEXTDIRECTION"))
+		$footerstyle .= "
+		<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
+
+	if(file_exists(THEME."css/custom.css"))
+		$footerstyle .= "
+		<link href='".THEME_ABS."css/custom.css' rel='stylesheet' />";
+		
+	return $footerstyle ; 	
+}		
 
 $HEADERCALL = "
 {BREAKINGNEWS}
@@ -235,7 +242,7 @@ $FOOTER = "		</div>
 <script type='text/javascript' src='".THEME_ABS."js/bootstrap.min.js'></script>
 <script type='text/javascript' src='".THEME_ABS."js/custom.js'></script>
 <!-- Developped AND design by Naja7host.com  -->
-";
+". theme_footer() ."";
 
 // Index template
 $HEADERINDEX =  $HEADERCALL ;
@@ -243,31 +250,31 @@ $HEADERINDEX =  $HEADERCALL ;
 
 $FOOTERINDEX = "
 				<div class='home-featured'>			
-					<div class='col-md-8 hidden-xs hidden-sm'>
-						<div class='slider-home '>
+					<div class='col-md-8 '>
+						<div class='slider-home hidden-xs hidden-sm '>
 							{SLIDER}
+							<div class='clearfix'></div>
 						</div>
+						
+						<div class='content'>
+							{VIDEO}
+							{INDEX}
+							{MAQALAT}
+							{INDEX1}				
+						</div>							
 					</div>
-					<div class='col-md-4 left-slider '>
-						{LAST24}
-					</div>	
+					<div class='col-md-4 sidebar'>						
+							{SETSTYLE=menu}
+							{LAST24}
+							{MENU=1}
+							{ADSTOPSIDE}
+							{MENU=2}
+							{MENU=3}
+							{MENU=5}
+							{FACEBOOK}
+					</div>					
 				</div>
-				<div class='clearfix'></div>
-				<div class='col-md-8 content'>
-					{VIDEO}
-					{INDEX}
-					{MAQALAT}
-					{INDEX1}				
-				</div>		
-				<div class='col-md-4 sidebar'>
-						{SETSTYLE=menu}
-						{MENU=1}
-						{ADSTOPSIDE}
-						{MENU=2}
-						{MENU=3}
-						{MENU=5}
-						{FACEBOOK}
-				</div>
+
 				<div class='clearfix'></div>
 				
 				<div class='col-md-12'>		    	
@@ -321,10 +328,11 @@ $FOOTERINDEX = "
 $FOOTERINDEX .="
 <link href='".THEME_ABS."css/video.css' rel='stylesheet'  />
 <link href='".THEME_ABS."sliders/".$pref['frontpage_news_slider_type']."/slider.css' rel='stylesheet'  />
-<script type='text/javascript' src='".THEME_ABS."js/amazingcarousel.js'></script>
-<script type='text/javascript' src='".THEME_ABS."js/initcarousel-1.js'></script>
+". theme_footer() ."
 <script type='text/javascript' src='".THEME_ABS."sliders/".$pref['frontpage_news_slider_type']."/slider.js'></script>
 <script type='text/javascript' src='".THEME_ABS."js/jquery.cycle.all.min.js'></script>
+<script type='text/javascript' src='".THEME_ABS."js/amazingcarousel.js'></script>
+<script type='text/javascript' src='".THEME_ABS."js/initcarousel-1.js'></script>
 <script type='text/javascript'>
 $('#myTab a').click(function (e) {
   e.preventDefault()
