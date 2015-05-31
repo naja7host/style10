@@ -7,10 +7,10 @@
 		$news_seo = strtolower(ereg_replace(' ', '-', $news_item['news_title'])); //added seo
         
         if ($seo_url == TRUE) {
-            return SITEURL ."news".$news_item['news_id'].".html";
+            return e_BASE ."news".$news_item['news_id'].".html";
 		} else {
             //return "http://www.".e_DOMAIN."/news.php?extend.".$news_item['news_id'];
-            return SITEURL ."news.php?extend.".$news_item['news_id'].".".$news_item['news_category'];
+            return e_BASE ."news.php?extend.".$news_item['news_id'].".".$news_item['news_category'];
         }
     }
     function make_url_sitemap($news_item)

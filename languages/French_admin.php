@@ -120,9 +120,6 @@ define("LAN_THEME_UPDATE_02", "المجلد  ");
 define("LAN_THEME_UPDATE_03", " غير قابل للكتابة ، عليك  منحه التصريح 777  ");
 define("LAN_THEME_UPDATE_04", "اخر إصدار متوفر");
 define("LAN_THEME_UPDATE_05", "تحديث الإصدار");
-define("LAN_THEME_UPDATE_06", "لم يتمكن من تحميل الملف");
-define("LAN_THEME_UPDATE_07", " تم  ترقية القالب بنجاح  ");
-define("LAN_THEME_UPDATE_08", " تم تحميل الملف ... ");
 
 // ABOUT PAGE
 define("LAN_THEME_ABOUT_01", " معلومات عن الستايل و القالب ");
@@ -225,7 +222,7 @@ define("LAN_THEME_ADMIN_87", "");
 define("LAN_THEME_ADMIN_88", "");
 define("LAN_THEME_ADMIN_89", "");
 define("LAN_THEME_ADMIN_90", "");
-define("LAN_THEME_ADMIN_91", "   ");
+define("LAN_THEME_ADMIN_91", " تم  ترقية القالب بنجاح  ");
 define("LAN_THEME_ADMIN_92", " Skip to main content  ");
 define("LAN_THEME_ADMIN_93", "");
 define("LAN_THEME_ADMIN_94", "غير متاح حاليا ، سيتم إضافة الخاصية في الإصدارات القادمة.");

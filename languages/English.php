@@ -1,19 +1,7 @@
 <?php
 /*
 + ----------------------------------------------------------------------------+
-|     e107 website system
-|
-|     ©Steve Dunstan 2001-2002
-|     http://e107.org
-|     jalist@e107.org
-|
-|     Released under the terms and conditions of the
-|     GNU General Public License (http://gnu.org).
-|
-|     $Source: /cvsroot/e107/e107_0.7/e107_themes/e107v4a/languages/English.php,v $
-|     $Revision: 1.5 $
-|     $Date: 2005/03/21 10:50:01 $
-|     $Author: stevedunstan $
+|	Work of NAJA7HOST SARL
 +----------------------------------------------------------------------------+
 */
 
@@ -27,7 +15,7 @@ define("LAN_THEME_6", "This Template is Created by <a href='http://www.naja7host
 define("LAN_THEME_7", "Index");
 define("LAN_THEME_8", "Who Are ?");
 define("LAN_THEME_9", "Sitemap");
-define("LAN_THEME_10", "RSS");
+define("LAN_THEME_10", "RSS Feeds");
 define("LAN_THEME_11", "Contact Us");
 define("LAN_THEME_12", "Shortlink for the News");
 define("LAN_THEME_13", "News Title");
@@ -56,8 +44,30 @@ define("LAN_THEME_33", " More  +   ");
 define("LAN_THEME_34", " Ads ");
 define("LAN_THEME_35", "24 Hour");
 define("LAN_THEME_36", "Comments : ");
-define("LAN_THEME_37", "puplish news : ");
-define("LAN_THEME_38", "Shortlink For this item  ");
+define("LAN_THEME_37", "Share News : ");
+define("LAN_THEME_38", "Short link For this item  ");
+define("LAN_THEME_39", "Subject Tools ");
+define("LAN_THEME_40", "On ");
+define("LAN_THEME_41", "Urgent ");
+define("LAN_THEME_42", "Social Links ");
+define("LAN_THEME_43", "Latest Twitts ");
+define("LAN_THEME_44", "Photo Gallery ");
+define("LAN_THEME_45", "News From ");
+define("LAN_THEME_46", "Weather ");
+define("LAN_THEME_47", "Follow Us");
+define("LAN_THEME_48", " ");
+
+define("LAN_THEME_50", "Follow us on skype");
+define("LAN_THEME_51", "Follow us on pinterest");
+define("LAN_THEME_52", "Follow us on vimeo");
+define("LAN_THEME_53", "Follow us on Picasa");
+define("LAN_THEME_54", "Follow us on Tumblr");
+define("LAN_THEME_55", "Email");
+define("LAN_THEME_56", "Phone");
+define("LAN_THEME_57", "Website");
+define("LAN_THEME_58", "Our Website");
+
+
 
 define("LAN_VIDEO_SHOW", "View Times");
 
@@ -68,4 +78,10 @@ define("ADD_COMMENT_SUBJECT", "Subject");
 define("ADD_COMMENT_BODY", "Comment *");
 define("ADD_COMMENT_CAPTCHA", "Captcha");
 define("ADD_COMMENT_BUTTON", "Add Comment");
+define("ADD_COMMENT_VERIFY_ERR", "Captcha Code incorrect"); 
+
+define("ADD_COMMENT_ERR", " You can't Leave the field Blank "); 
+
+define("LAN_180", "Search");
+
 ?>

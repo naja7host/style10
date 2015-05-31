@@ -7,6 +7,8 @@
 +---------------------------------------------------------------*/
 if (!defined('e107_INIT')) { exit; }
 
+// print_r($_SERVER);
+
 if (e_LANGUAGE == "Arabic")
 	$themename = " الستايل الإخباري - الشكل 10";
 else 
@@ -25,7 +27,7 @@ define("LOGOSTYLE", " class='logo' ");
 
 
 	
-$themeversion = "2.8";
+$themeversion = "2.7";
 $themeauthor = "Naja7Host";
 $themedate = "03-12-2014";
 $themeinfo = "e107v7+";
@@ -74,7 +76,7 @@ $register_sc[] = 'ADSNEWSBOTTOM';
 $register_sc[] = 'ADSLEFTFIXED';
 $register_sc[] = 'ADSRIGHTFIXED';
 
-// $register_sc[] = "TICKER";
+$register_sc[] = "TICKER";
 // $register_sc[] = 'TA7RIR';
 // $register_sc[] = 'CARICATURE';
 // $register_sc[] = 'PHOTOGRAPH';
@@ -92,8 +94,8 @@ function theme_head() {
 	$headerstyle = "
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 		<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-		<link href='".THEME_ABS."css/bootstrap.min.css' rel='stylesheet'  media='screen' />
-		<link href='".THEME_ABS."css/bootstrap-theme.min.css' rel='stylesheet'  media='screen' />
+		<link href='".THEME_ABS."css/bootstrap.css' rel='stylesheet'  media='screen' />
+		<link href='".THEME_ABS."css/bootstrap-theme.css' rel='stylesheet'  media='screen' />
 		<!--[if lt IE 9]>
 		  <script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'></script>
 		  <script src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js'></script>
@@ -104,9 +106,9 @@ function theme_head() {
 		<link rel='image_src' href='".THEME_ABS."images/logo/".$pref['frontpage_news_logo']."' /> -->
 		";
 		
-	if(defined("TEXTDIRECTION"))
+	if(defined("TEXTDIRECTION") /*AND (!empty(TEXTDIRECTION))*/ )
 		$headerstyle .= "
-		<link href='".THEME_ABS."css/".TEXTDIRECTION."bootstrap.min.css' rel='stylesheet'  media='screen' />";
+		<link href='".THEME_ABS."css/".TEXTDIRECTION."bootstrap.css' rel='stylesheet'  media='screen' />";
 
 		
 	if(defined("COLORSTYLE"))
@@ -120,7 +122,7 @@ function theme_head() {
 		
 		$headerstyle .= "
 		<script type='text/javascript' src='".THEME_ABS."js/jquery.min.js'></script>
-		<script type='text/javascript' src='".THEME_ABS."js/jquery-ui.min.js'></script>	";
+		<script type='text/javascript' src='".THEME_ABS."js/jquery-ui.min.js'></script>";
 	
 	if(!stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'admin-theme.php') == TRUE)
 		return $headerstyle;
@@ -128,10 +130,14 @@ function theme_head() {
 
 function theme_footer() {
 	
-	$footerstyle = "";
+	$footerstyle = "
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script type='text/javascript' src='".THEME_ABS."js/bootstrap.min.js'></script>
+		<script type='text/javascript' src='".THEME_ABS."js/custom.js'></script>
+		<!-- Developped AND design by Naja7host.com  -->";
 
-	if(defined("TEXTDIRECTION"))
-		$footerstyle .= "
+	if(defined("TEXTDIRECTION") /*&& !empty(TEXTDIRECTION) */) 
+		$footerstyle .= "	
 		<link href='".THEME_ABS."css/".TEXTDIRECTION.".css' rel='stylesheet' />";
 
 	if(file_exists(THEME."css/custom.css"))
@@ -146,8 +152,7 @@ $HEADERCALL = "
 <div class='container'>
 	<div class='nav-first-w'>
 		{ADSLEFTFIXED}
-		{ADSRIGHTFIXED}
-		
+		{ADSRIGHTFIXED}		
 		<div class='nav-first '>
 			<div class='col-md-6 nav-first-right hidden-xs hidden-sm row'>
 			     {LINKSTYLE=topnav2}{SITELINKS=flat:2}              			
@@ -161,6 +166,7 @@ $HEADERCALL = "
 	</div>
 	<div class='clearfix'></div>
 	
+	<div class='tickercontainer'>	".LAN_THEME_14. " : {TICKER}</div>
 	<div class='col-md-12  logo-advert'>
 		<div class='col-md-4  logo-header'>					
 		  ".$logo."
@@ -237,53 +243,49 @@ $FOOTER = "		</div>
 		<div class='clearfix'></div>
 
 	</div>
-</div>	
-<!-- Placed at the end of the document so the pages load faster -->
-<script type='text/javascript' src='".THEME_ABS."js/bootstrap.min.js'></script>
-<script type='text/javascript' src='".THEME_ABS."js/custom.js'></script>
-<!-- Developped AND design by Naja7host.com  -->
+</div>
 ". theme_footer() ."";
 
 // Index template
 $HEADERINDEX =  $HEADERCALL ;
-		
 
 $FOOTERINDEX = "
-				<div class='home-featured'>			
-					<div class='col-md-8 '>
-						<div class='slider-home hidden-xs hidden-sm '>
-							{SLIDER}
-							<div class='clearfix'></div>
-						</div>
-						
-						<div class='content'>
-							{VIDEO}
-							{INDEX}
-							{MAQALAT}
-							{INDEX1}				
-						</div>							
-					</div>
-					<div class='col-md-4 sidebar'>						
-							{SETSTYLE=menu}
-							{LAST24}
-							{MENU=1}
-							{ADSTOPSIDE}
-							{MENU=2}
-							{MENU=3}
-							{MENU=5}
-							{FACEBOOK}
-					</div>					
-				</div>
-
-				<div class='clearfix'></div>
 				
+				<div class='col-md-8 '>
+					<div class='slider-home hidden-xs hidden-sm '>
+						{SLIDER}
+						<div class='clearfix'></div>
+					</div>
+					
+					<div class='content'>
+						{VIDEO}
+						{INDEX}
+						{MAQALAT}
+						{INDEX1}				
+					</div>							
+				</div>
+				<div class='col-md-4 sidebar'>						
+						{SETSTYLE=menu}
+						{LAST24}
+						{MENU=1}
+						{ADSTOPSIDE}
+						{MENU=2}
+						{MENU=3}
+						{MENU=5}
+						{FACEBOOK}
+				</div>					
+			</div>		
+			<div class='clearfix'></div>
+			<div class='row'>				
 				<div class='col-md-12'>		    	
 					{INDEX2}				
 				</div>
 				<div class='clearfix'></div>
 			</div>
 		</div>
-
+		
+		<div class='clearfix'></div>
+		
 		<div class='footer'>			
 			<div class='footer-style'>
 				<div class='footer-box'>				
@@ -319,11 +321,7 @@ $FOOTERINDEX = "
 		</div> <!--end bottom Bar-->	
 		<div class='clearfix'></div>
 	</div>
-</div>
-<!-- Placed at the end of the document so the pages load faster -->
-<script type='text/javascript' src='".THEME_ABS."js/bootstrap.min.js'></script>
-<script type='text/javascript' src='".THEME_ABS."js/custom.js'></script>
-<!-- Developped AND design by Naja7host.com  -->";
+</div>";
 
 $FOOTERINDEX .="
 <link href='".THEME_ABS."css/video.css' rel='stylesheet'  />
@@ -350,15 +348,16 @@ $CUSTOMFOOTER['admin-theme'] = " ";
 $CUSTOMPAGES['admin-theme']  = 'admin-theme.php';
 
 // You can customize the news-category bullet listing here.
-$NEWSARCHIVE ="<div>
+$NEWSARCHIVE ="
+	<div>
 		<table style='width:98%;'>
-		<tr>
-		<td>
-		<div>{ARCHIVE_BULLET} <b>{ARCHIVE_LINK}</b> <span class='smalltext'><i>{ARCHIVE_AUTHOR} @ ({ARCHIVE_DATESTAMP}) ({ARCHIVE_CATEGORY})</i></span></div>
-		</td>
-		</tr>
+			<tr>
+				<td>
+					<div>{ARCHIVE_BULLET} <b>{ARCHIVE_LINK}</b> <span class='smalltext'><i>{ARCHIVE_AUTHOR} @ ({ARCHIVE_DATESTAMP}) ({ARCHIVE_CATEGORY})</i></span></div>
+				</td>
+			</tr>
 		</table>
-		</div>";
+	</div>";
 		
 $NEWSLISTSTYLE = "	
 	<article >

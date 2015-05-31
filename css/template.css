@@ -55,7 +55,7 @@ h4 a {color: #fff;font-size: 22px;}
 .nav-first-right{float:left;/*padding-left: 0px;*/}
 .nav-first-left {float: right;text-align:left;}
 
-.nav-first {margin: 0 auto;position: relative;width: auto;height: 45px;/*padding: 6px 0px;*/background:#716C6C;}
+.nav-first {margin: 0 auto;position: relative;width: auto;height: 43px;/*padding: 6px 0px;*/background:#716C6C;}
 .wspfull {background: none repeat scroll 0 0 #fff;margin: 0 auto;padding: 0 10px;box-shadow:0 2px 5px -1px rgba(22, 33, 44, 0.4);-moz-box-shadow:0 2px 5px -1px rgba(22, 33, 44, 0.4);-webkit-box-shadow:0 2px 5px -1px rgba(22, 33, 44, 0.4);}
 
 /***  logo & Pub ***/
@@ -99,9 +99,20 @@ a.tumblr {background: url("../images/social/colour/Tumblr.png") no-repeat scroll
 a.tumblr:hover {background: url("../images/social/grey/Tumblr.png") no-repeat scroll 0 0 transparent;}
 a.rss {background: url("../images/social/colour/RSS.png") no-repeat scroll 0 0 transparent;}
 a.rss:hover {background: url("../images/social/grey/RSS.png") no-repeat scroll 0 0 transparent;}
+a.mail{background: url("../images/social/colour/Mail.png") no-repeat scroll 0 0 transparent;}
+a.mail:hover {background: url("../images/social/grey/Mail.png") no-repeat scroll 0 0 transparent;}
+a.phone {background: url("../images/social/colour/Phone.png") no-repeat scroll 0 0 transparent;}
+a.phone:hover {background: url("../images/social/grey/Phone.png") no-repeat scroll 0 0 transparent;}
+a.html5{background: url("../images/social/colour/HTML5.png") no-repeat scroll 0 0 transparent;}
+a.html5:hover {background: url("../images/social/grey/HTML5.png") no-repeat scroll 0 0 transparent;}
+a.internet{background: url("../images/social/colour/IE.png") no-repeat scroll 0 0 transparent;}
+a.internet:hover {background: url("../images/social/grey/IE.png") no-repeat scroll 0 0 transparent;}
 
-a.facebook , a.twitter ,a.youtube  ,a.googleplus ,a.flicker ,a.instagram, a.linkedin , a.github , a.pinterest , a.skype , a.vimeo , a.picasa , a.tumblr  , a.rss {float: left;height: 24px;    text-indent: -9999px;    width: 24px;background-size: contain;}
-a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flicker:hover ,a.instagram:hover, a.linkedin:hover , a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hover , a.tumblr:hover  , a.rss:hover{background-size: contain;}
+
+a.facebook , a.twitter ,a.youtube  ,a.googleplus ,a.flicker ,a.instagram, a.linkedin , a.github , a.pinterest , a.skype , a.vimeo , a.picasa , a.tumblr  , a.rss ,a.phone,a.mail,a.html5,a.internet {float: left;height: 24px;    text-indent: -9999px;    width: 24px;background-size: contain;}
+a.facebook:hover , a.twitter:hover ,a.youtube:hover  ,a.googleplus:hover ,a.flicker:hover ,a.instagram:hover, a.linkedin:hover , a.github:hover , a.pinterest:hover , a.skype:hover, a.vimeo:hover , a.picasa:hover , a.tumblr:hover  , a.rss:hover , a.phone:hover, a.mail:hover , a.html5:hover,a.internet:hover {background-size: contain;}
+
+.stButton .stFb, .stButton .stTwbutton, .stButton .stMainServices {height: auto;}
 
 /*
 	======================================================================
@@ -156,6 +167,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu{display: block;}
 
 .leftfixed{z-index: 2;left: -160px;position: absolute;top: 5px;width: 160px;overflow:hidden;}
 .rightfixed{z-index: 2;right: -160px;position: absolute;top: 5px;width: 160px;overflow:hidden;}
+
+.tickercontainer {background: none repeat scroll 0px 0px;padding: 7px;}
+
 /*
 	======================================================================
 		search
@@ -180,11 +194,11 @@ ul.nav li.dropdown:hover ul.dropdown-menu{display: block;}
 
 .home-featured {padding-bottom:10px;float: left;width:100%;}
 .home-featured-right {padding-left: 0;padding-right: 0;}
-.slider-home {position: relative;width: 100%;z-index: 1;/*height: 280px;padding-right: 9px;padding-left: 0px;*/}
+.slider-home {position: relative;width: 100%;z-index: 1; padding-bottom: 8%;/*height: 280px;padding-right: 9px;padding-left: 0px;*/}
 .content {/*margin: 0px;*/}
 .sidebar {/* position: relative;    z-index: 1;	padding-right: 0px;*/}
 .left-slider{}
-.sidebar-wrapper {width: 100%;background: none repeat scroll 0 0 #fff;box-shadow: 0 2px 5px -1px #d1d1d1;float: right;margin-bottom: 15px;}
+/*.sidebar-wrapper {width: 100%;background: none repeat scroll 0 0 #fff;box-shadow: 0 2px 5px -1px #d1d1d1;float: right;margin-bottom: 15px;}*/
 .module-border-2 .news_image  , .panel-body .news_image{/*width: 100%;height: 100%;*/float: left; margin-left: 5px;margin-right: 5px;}
 .module-border-2 .news_titlelink , .panel-body .news_titlelink{display: block;	color: #363636;	font-weight: bold;	/*font-size: 14px;*/	}
 .post-thumbnail {/*height: 100px;*/}
@@ -212,11 +226,11 @@ ul.nav li.dropdown:hover ul.dropdown-menu{display: block;}
 
 /*** sidebar-wrapper ***/
 
-.sidebar-wrapper {background: none repeat scroll 0% 0% #FFF;    margin-bottom: 15px;    float: right;    width: 100%;    box-shadow: 0px 2px 5px -1px #D1D1D1;}
+.sidebar-wrapper {/*background: none repeat scroll 0% 0% #FFF;float: right;width: 100%;box-shadow: 0px 2px 5px -1px #D1D1D1;*/margin-bottom: 15px; }
 .sidebar-wrapper h2 a {text-decoration: none;}
 .sidebar-wrapper h2, .sidebar-wrapper h3 , .sidebar-wrapper h2 a , .sidebar-wrapper h3 a {/*font: 400 17px/25px "Droid Arabic Kufi";*/}
 .sidebar-wrapper h2 {background: url('../images/white-grad.jpg') repeat-x scroll 0px 30px transparent;border-bottom: 1px solid #EEF1F5;padding: 8px 0px;width: auto;text-align: right;text-indent: 17px;}
-
+.sidebar-wrapper img {max-width:100%}
 .module-border-2 {border-top: 0px solid #ca0002;padding-bottom: 10px;} 
 
 /*** module-posts-1 ***/

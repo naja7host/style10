@@ -349,6 +349,10 @@ $xurls = array(
 	'picasa'		=>	array('label'=>"Picasa",	"placeholder"=>""),	
 	'tumblr'		=>	array('label'=>"Tumblr",	"placeholder"=>""),		
 	'rss'			=>	array('label'=>"RSS",		"placeholder"=>"eg. ". e_SITE . e_PLUGIN ."rss_menu/rss.php"),
+	'mail'			=>	array('label'=>"Mail",		"placeholder"=>""),	
+	'phone'			=>	array('label'=>"Phone",		"placeholder"=>""),	
+	'html5'			=>	array('label'=>"html5",		"placeholder"=>""),
+	'internet'		=>	array('label'=>"internet",	"placeholder"=>""),		
 );	
 	
 if(is_array($pref['xurl']))
@@ -367,6 +371,10 @@ if(is_array($pref['xurl']))
 	define('XURL_PICASA', varsettrue($pref['xurl']['picasa'], false));
 	define('XURL_TUMBLR', varsettrue($pref['xurl']['tumblr'], false));
 	define('XURL_RSS', varsettrue($pref['xurl']['rss'],  e_PLUGIN ."rss_menu/rss.php"));
+	define('XURL_MAIL', varsettrue($pref['xurl']['mail'],  false));
+	define('XURL_PHONE', varsettrue($pref['xurl']['phone'],  false));
+	define('XURL_HTML5', varsettrue($pref['xurl']['html5'],  false));
+	define('XURL_INTERNET', varsettrue($pref['xurl']['internet'],  false));
 }
 else
 {
@@ -384,6 +392,10 @@ else
 	define('XURL_PICASA', false);
 	define('XURL_TUMBLR', false);
 	define('XURL_RSS', e_PLUGIN ."rss_menu/rss.php");
+	define('XURL_PHONE', false);
+	define('XURL_MAIL', false);
+	define('XURL_HTML5', false);
+	define('XURL_INTERNET', false);
 }
 
 if ($pref['frontpage_news_colorstyle'])

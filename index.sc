@@ -31,7 +31,7 @@
 							<ul>";					
 				while($row = $sql -> db_Fetch())
 				{
-					$pref['shortdate'] = "%d-%m-%Y ";
+					$pref['shortdate'] = "%d-%m-%Y";
 					extract($row);
 					$caption = "
 								<span>
@@ -52,8 +52,8 @@
 									<div class='title'>
 										{NEWSTITLELINK=extend}									
 									</div>								
-									" .$showdate."
-									{NEWSBODY=400}
+									" .$showdate. "
+									{NEWSBODY=380}
 								</div>
 							</li>";
 							

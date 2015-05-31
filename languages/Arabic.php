@@ -1,12 +1,7 @@
 <?php
 /*
 + ----------------------------------------------------------------------------+
-|     e107 website system
-|
-|     ©Steve Dunstan 2001-2002
-|     http://e107.org
-|     jalist@e107.org
-|
+|	Work of NAJA7HOST SARL
 +----------------------------------------------------------------------------+
 */
 
@@ -65,6 +60,10 @@ define("LAN_THEME_51", "تابعنا على pinterest");
 define("LAN_THEME_52", "تابعنا على vimeo");
 define("LAN_THEME_53", "تابعنا على Picasa");
 define("LAN_THEME_54", "تابعنا على Tumblr");
+define("LAN_THEME_55", "الايميل");
+define("LAN_THEME_56", "رقم الهاتف");
+define("LAN_THEME_57", "موقعنا الالكتروني");
+define("LAN_THEME_58", "موقعنا الالكتروني");
 
 define("LAN_VIDEO_SHOW", "عدد المشاهدات");
 

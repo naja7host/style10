@@ -71,8 +71,9 @@ if (isset($pref['plug_installed']['ytm_gallery']))
 								<a href='http://www.youtube.com/embed/$movie_code' title='$movie_title'  class='html5lightbox'>
 								  <img src='http://i.ytimg.com/vi/$movie_code/0.jpg' alt='$movie_title' />
 								</a>
-						   </div>
-						   <div href='http://www.youtube.com/embed/$movie_code' title='$movie_title' class='amazingcarousel-title'>$movie_title</div>                    </div>
+							</div>
+						   <div href='http://www.youtube.com/embed/$movie_code' title='$movie_title' class='amazingcarousel-title'>$movie_title</div>
+					   </div>
 					</li>";
 			else 
 				$ytm_text .= "
@@ -83,14 +84,15 @@ if (isset($pref['plug_installed']['ytm_gallery']))
 								  <img src='http://i.ytimg.com/vi/$movie_code/0.jpg' alt='$movie_title' />
 								</a>
 						   </div>
-						   <div href='http://www.youtube.com/embed/$movie_code' title='$movie_title' class='amazingcarousel-title'>$movie_title</div>                    </div>
+						   <div href='http://www.youtube.com/embed/$movie_code' title='$movie_title' class='amazingcarousel-title'>$movie_title</div>
+						</div>
 					</li>";
 		}
 		
 		
 
 		if ( $store_seo == 1 ) 	
-			$capvideo .= "<a href='" . e_HTTP . "video/list/' title='".LAN_YTM_PLUGIN_9."' >" . $film_menu . "</a>";
+			$capvideo .= "<a href='" . e_BASE . "video/list/' title='".LAN_YTM_PLUGIN_9."' >" . $film_menu . "</a>";
 		else 
 			$capvideo .= "<a href='" . e_PLUGIN."ytm_gallery/ytm.php' title='".LAN_YTM_PLUGIN_9."'>" . $film_menu . "</a>";	
 			
