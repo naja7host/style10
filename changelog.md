@@ -2,7 +2,7 @@ v3.1
 =======
 * Added Option To Show/Hide Author , News Date , Share, SHortenurl , Views , Cont Comment - خاصية إضهار او إخفاء ناشر الخبر ، تاريخ النشر ، المشاهدات ، عدد التعليقات 
 * Fix Some Minor bugs - تصحيح بعض الاخطاء
-* 
+
 v3.0
 =======
 * Added Changelog - إضافة سجل تتبع التحديثات
