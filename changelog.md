@@ -1,3 +1,9 @@
+v3.0
+=======
+* Added Changelog 
+* Added Promotion Page
+* Fix Some Minor bugs
+
 v2.9
 =======
 * Updated Bootstrap v3.3.4

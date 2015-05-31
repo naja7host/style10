@@ -53,6 +53,9 @@ if (!defined('e107_INIT')) { exit; }
 							</div>";		
 	}
 	
+	
+	$raw_response =  file_get_contents("https://raw.githubusercontent.com/naja7host/$themerawname/master/changelog.md");
+
 // ===========================================================================
 
 	function config() 
@@ -91,4 +94,14 @@ if (!defined('e107_INIT')) { exit; }
 					</div><!-- end table respo -->
 				".  $rs->form_close() ."	
 				</div><!-- end panel body -->
-			</div><!-- end panel -->";
+			</div><!-- end panel -->
+			
+			<div class='panel panel-info'>
+				<div class='panel-heading'><i class='icon-star orange'></i> ". LAN_THEME_UPDATE_09 ."</div>							
+				<div class='panel-body'>					
+						". nl2br ($raw_response) ."
+				</div><!-- end panel body -->
+			</div><!-- end panel -->			
+			
+			
+			";

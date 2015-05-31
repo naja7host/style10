@@ -27,7 +27,7 @@ define("LAN_THEME_ADMIN_SIDE_11", "صفحة عرض الخبر");
 define("LAN_THEME_ADMIN_SIDE_12", "خبر عاجل");
 define("LAN_THEME_ADMIN_SIDE_13", "تحديث الستايل / القالب");
 define("LAN_THEME_ADMIN_SIDE_14", "حول الستايل");
-define("LAN_THEME_ADMIN_SIDE_15", "عروض النجاح هوست");
+define("LAN_THEME_ADMIN_SIDE_15", "أخبار و عروض النجاح هوست");
 
 // FONTS PAGES
 define("LAN_THEME_FONT_01", " أختر نوع الخط الذي تريد استخدامه ");
@@ -123,13 +123,16 @@ define("LAN_THEME_UPDATE_05", "تحديث الإصدار");
 define("LAN_THEME_UPDATE_06", "لم يتمكن من تحميل الملف");
 define("LAN_THEME_UPDATE_07", " تم  ترقية القالب بنجاح  ");
 define("LAN_THEME_UPDATE_08", " تم تحميل الملف ... ");
+define("LAN_THEME_UPDATE_09", " اخر التعديلات و الاضافات ");
+define("LAN_THEME_UPDATE_10", "  ");
 
 // ABOUT PAGE
 define("LAN_THEME_ABOUT_01", " معلومات عن الستايل و القالب ");
 define("LAN_THEME_ABOUT_02", " التقنيات و الادوات التالية تم استخدامها في تطوير  هذا الستايل و القالب");
 
 // PROMOTION PAGE
-
+define("LAN_THEME_PROMOTION_01", "لا يوجد حاليا أي اخبار أو عروض للعرض");
+define("LAN_THEME_PROMOTION_02", "بتاريخ ");
 
 // Commun language
 define('LAN_THEME_ADMIN_DISABLED', 'تعطيل البلوك');
