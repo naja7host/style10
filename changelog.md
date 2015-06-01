@@ -1,10 +1,6 @@
 v3.1
 =======
-<<<<<<< HEAD
 * Added Option To Show/Hide Author , News Date , Share, SHortenurl , Views , Cont Comment - خاصية إضهار او إخفاء ناشر الخبر ، تاريخ النشر ، المشاهدات ، عدد التعليقات
-=======
-* Added Option To Show/Hide Author , News Date , Share, SHortenurl , Views , Cont Comment - خاصية إضهار او إخفاء ناشر الخبر ، تاريخ النشر ، المشاهدات ، عدد التعليقات 
->>>>>>> origin/master
 * Fix Some Minor bugs - تصحيح بعض الاخطاء
 
 v3.0
@@ -15,21 +11,11 @@ v3.0
 
 v2.9
 =======
-* Updated Bootstrap v3.3.4 - تحديث لاخر إضدار
-<<<<<<< HEAD
-* Updtaed bootstrap-rtl version 3.3.2-rc1 - تحديث لاخر إضدار
-* Updated jQuery v2.1.4 - تحديث لاخر إضدار
-* Fix Slider Show Margin - تصحيح السلايدر
-* Added New Social Icons - إضافة ايقونات مشاركة جديدة
-* Added News Tickers - اضافة شريط اخر الاخبار
-=======
 * Updtaed bootstrap-rtl  version 3.3.2-rc1 - تحديث لاخر إضدار
 * Updated jQuery v2.1.4 - تحديث لاخر إضدار
 * Fix Slider Show Margin - تصحيح السلايدر 
 * Added New Social Icons - إضافة ايقونات مشاركة جديدة
 * Added News Tickers - اضافة شريط اخر الاخبار
-* 
->>>>>>> origin/master
 
 v2.8
 =======
