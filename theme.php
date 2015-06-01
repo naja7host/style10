@@ -358,8 +358,8 @@ $NEWSARCHIVE ="
 			</tr>
 		</table>
 	</div>";
-		
-$NEWSLISTSTYLE = "	
+
+$NEWSLISTSTYLE = "
 	<article >
 		<div class='panel panel-default'>
 			<div class='panel-heading'>
@@ -368,15 +368,14 @@ $NEWSLISTSTYLE = "
 			<div class='panel-body item-list'>
 				<div class='col-md-4 thumbnail post-thumbnail '>{NEWSIMAGETHUMB}</div>
 				<div class='col-md-8 entry'>
-					<p>{NEWSBODY}{EXTENDED}</p>				
+					<p>{NEWSBODY}{EXTENDED}</p>
 				</div>
 			</div>		
 		</div>	
 	</article>";
 
 $NEWSSTYLE = "";
-if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE) 
-{
+if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE) {
 	$NEWSSTYLE .= "
     <ul class='breadcrumb'>
 		<li><a href='". SITEURL ."' >".LAN_THEME_7."</a> </li>
@@ -385,7 +384,7 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
     </ul>
 	
     <div class='breadcrumb'>
-		<span class='glyphicon glyphicon-time'></span> ".LAN_THEME_40." {NEWSDATE}
+		". ($pref['frontpage_news_dateaddedd'] ? "" : "<span class='glyphicon glyphicon-time'></span> ".LAN_THEME_40." {NEWSDATE}" ) ."
 		<div class='btn-group pull-right'>
 			<button type='button' class='btn btn-default'>".LAN_THEME_39."</button>
 			<button type='button' class='btn btn-default dropdown-toggle' data-toggle='dropdown'>
@@ -407,12 +406,10 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 	
 	<div class='well'>	
 		<article>
-			
 			<div class='alert title-news text-center'>
-				
 				<h1>{NEWSTITLE}</h1>
 			</div>
-			
+
 			<div class='panel panel-default text-center'>
 			  <div class='panel-body'>
 				{NEWSIMAGE}
@@ -421,29 +418,26 @@ if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE)
 			</div>
 
 			<p class='text-justify'>{NEWSBODY}</p>
-			<div class='clearfix'>  </div>
-			
+			<div class='clearfix'></div>
+
 			{ADSNEWSBOTTOM}
-			
+
 			<div class='alert title-news'>
-				{SHARE}
-				<div class='clearfix'>  </div>	
+				". ($pref['frontpage_news_share'] ? "" : "{SHARE}") ."
+				<div class='clearfix'></div>	
 			</div>
 			
-			{SHOURTURL}
+			". ($pref['frontpage_news_shorturl'] ? "" : "{SHOURTURL}") ."
 			
-		</article>	
+		</article>
 	</div>
 	<div class='well well-small'>
-		<span class='glyphicon glyphicon-user'></span> ".LAN_THEME_4."  : {NEWSAUTHOR} <div class='clearfix'>  </div>
-		 <div class='clearfix'>  </div>
-		<span class='glyphicon glyphicon-tasks'></span> {VIEWS} <div class='clearfix'>  </div>
-		<span class='glyphicon glyphicon-comment'></span> ".LAN_THEME_36." {NEWSCOMMENTCOUNT} <div class='clearfix'>  </div>
-		{PDFICON} {EMAILICON} {PRINTICON} {ADMINOPTIONS} {TRACKBACK} <div class='clearfix'>  </div>
+		". ($pref['frontpage_news_poster']			? "" : "<span class='glyphicon glyphicon-user'></span> ".LAN_THEME_4."  : {NEWSAUTHOR} <div class='clearfix'></div>") ."
+		". ($pref['frontpage_news_countview']		? "" : "<span class='glyphicon glyphicon-tasks'></span> {VIEWS} <div class='clearfix'></div>" )."
+		". ($pref['frontpage_news_countcomments']	? "" : "<span class='glyphicon glyphicon-comment'></span> ".LAN_THEME_36." {NEWSCOMMENTCOUNT} <div class='clearfix'></div>" )."
 	</div>
-	
-	{NEWSCOMMENTS}	
-	";
+
+	{NEWSCOMMENTS}";
 } else {
 	$NEWSSTYLE .= "
 	<article >

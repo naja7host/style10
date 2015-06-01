@@ -106,6 +106,15 @@ define("LAN_THEME_MENUS_04", "  صرف العملات");
 define("LAN_THEME_MENUS_05", "  ترتيب البطولات");
 
 // NEWS PAGE
+define("LAN_THEME_NEWSPAGE_01", " إخفاء  أيقونات نشر/مشاركة الخبر");
+define("LAN_THEME_NEWSPAGE_02", " إخفاء  رابط مختر للمقالة");
+define("LAN_THEME_NEWSPAGE_03", " إخفاء  طباعة الصفحة");
+define("LAN_THEME_NEWSPAGE_04", " إخفاء  أرسال الخبر لصديق");
+define("LAN_THEME_NEWSPAGE_05", " إخفاء  ناشر الخبر");
+define("LAN_THEME_NEWSPAGE_06", " إخفاء  تاريخ النشر");
+define("LAN_THEME_NEWSPAGE_07", " إخفاء  عدد المشاهدات");
+define("LAN_THEME_NEWSPAGE_08", " إخفاء  عدد التعليقات");
+
 
 // URGENT NEWS
 define("LAN_THEME_URGENT_01", "طريقة عرض الخبر العاجل");

@@ -439,7 +439,6 @@ if(!$pref['frontpage_catnews_limit'])
 
 if($pref['frontpage_news_showdate'])
 	$showdate = "<div class='label-info  news_box_index_newsdate '>{NEWSDATE=short}</div>";
-
 else
 	$showdate = "";	
 
@@ -456,10 +455,10 @@ if(!$pref['frontpage_news_datetype'])
 	setlocale(LC_TIME, 'ar_IN');	
 
 	
-if(!$pref['frontpage_news_shorturl'])
-	$pref['frontpage_news_shorturl'] = true;	
+// if(!$pref['frontpage_news_shorturl'])
+	// $pref['frontpage_news_shorturl'] = true;	
 	
-if(!defined("TEXTDIRECTION"))
-	define('TEXTDIRECTION', "");	
+// if(!defined("TEXTDIRECTION"))
+	// define('TEXTDIRECTION', "");	
 
 ?>

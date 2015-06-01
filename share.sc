@@ -1,7 +1,5 @@
-if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE) {
-$news_item = getcachedvars('current_news_item'); 
+if( stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE ) {
 return "
-
 <fieldset>
 	<legend>".LAN_THEME_37."</legend>
 	<!-- AddThis Button BEGIN -->

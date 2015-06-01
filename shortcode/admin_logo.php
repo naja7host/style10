@@ -42,11 +42,11 @@ if (isset($_POST['frontpage_news_submit_upload']))
 	$text .= "	<li class='active'>".LAN_THEME_ADMIN_SIDE_5."</li>
 			</ol><!--.breadcrumb-->
 			". $result ."	
-			". $rs->form_open("post", e_SELF."?logo" ,  'frontpage_news_submit_pictures', '', 'enctype="multipart/form-data"') ."
 			<!--PAGE CONTENT BEGINS HERE-->	
 			<div class='panel panel-primary'>
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_5 ."</div>							
-				<div class='panel-body'>										
+				<div class='panel-body'>
+					". $rs->form_open("post", e_SELF."?logo" ,  'frontpage_news_submit_pictures', '', 'enctype="multipart/form-data"') ."
 					<div class='table-responsive' >
 						<table class='table  table-hover'>
 							<tr >
@@ -55,19 +55,21 @@ if (isset($_POST['frontpage_news_submit_upload']))
 							</tr>				
 						</table>
 					</div><!-- end table respo -->
+					<input type='hidden' name='e-token' value='".e_TOKEN."' />
 					<button class='btn btn-info button-save' name='frontpage_news_submit_pictures'>
 						<span class='glyphicon glyphicon-upload'></span>
 						<span class='hidden-phone'>".LAN_THEME_ADMIN_SAVE."</span>
-					</button>												
+					</button>			
+					". $rs->form_close() ."					
 				</div><!-- end panel body -->
 			</div><!-- end panel -->
-			<input type='hidden' name='e-token' value='".e_TOKEN."' />
-			".$rs->form_close() .
+
 			
-			$rs->form_open("post", e_SELF."?logo" ,  'frontpage_news_submit_upload', '', 'enctype="multipart/form-data"') ."
+			
 			<div class='panel panel-primary'>
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_LOGO_04 ."</div>										
-				<div class='panel-body'>										
+				<div class='panel-body'>
+					". $rs->form_open("post", e_SELF."?logo" ,  'frontpage_news_submit_upload', '', 'enctype="multipart/form-data"') ."
 					<div class='table-responsive' >
 						<table class='table  table-hover'>
 							<tr >
@@ -76,12 +78,14 @@ if (isset($_POST['frontpage_news_submit_upload']))
 							</tr>						
 						</table>
 					</div><!-- end table respo -->
+					<input type='hidden' name='e-token' value='".e_TOKEN."' />
 					<button class='btn btn-info button-save' name='frontpage_news_submit_upload'>
 						<span class='glyphicon glyphicon-save'></span>
 						<span class='hidden-phone'>".LAN_THEME_ADMIN_SAVE."</span>
-					</button>												
+					</button>
+					". $rs->form_close() ."					
 				</div><!-- end panel body -->
 			</div><!-- end panel -->
-			<input type='hidden' name='e-token' value='".e_TOKEN."' />
+			
 			".$rs->form_close() ;	
 	

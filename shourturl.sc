@@ -1,4 +1,4 @@
-if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE &&  ($pref['frontpage_news_shorturl']) )   {
+if(stristr(e_PAGE.(e_QUERY ? "?".e_QUERY : ""), 'news.php?extend') == TRUE )   {
 	$news_item = getcachedvars('current_news_item'); 
 	return "
 	

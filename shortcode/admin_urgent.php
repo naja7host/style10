@@ -26,8 +26,7 @@ if (!defined('e107_INIT')) { exit; }
 			<div class='panel panel-primary'>
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_12 ."</div>							
 				<div class='panel-body'>
-					". $rs->form_open("post", e_SELF."?urgent" ,  'frontpage_news_submit_urgent', '', 'enctype="multipart/form-data"' , "class='form-horizontal'") ."
-					
+					". $rs->form_open("post", e_SELF."?urgent" ,  'frontpage_news_submit_urgent', '', 'enctype="multipart/form-data"' , "class='form-horizontal'") ."					
 					<div class='alert alert-warning'>". LAN_THEME_URGENT_05 ."</div>
 					<div class='form-group'>
 						<label class='col-sm-2 control-label'>". LAN_THEME_URGENT_04 ."</label>
@@ -47,15 +46,13 @@ if (!defined('e107_INIT')) { exit; }
 						".$rs->form_radio("frontpage_urgent_position", 1, ($pref['frontpage_urgent_position'] ? 1 : "")). LAN_THEME_URGENT_03 ."
 						</label>
 					</div>
-					
-
 					<input type='hidden' name='e-token' value='".e_TOKEN."' />
 					<button class='btn btn-info button-save' name='frontpage_news_submit_urgent' >
 						<span class='glyphicon glyphicon-save'></span>
 						<span class='hidden-phone'>".LAN_THEME_ADMIN_SAVE."</span>
 					</button>
-				". $rs->form_close() ."						
+					". $rs->form_close() ."
 				</div><!-- end panel body -->
 			</div><!-- end panel -->
-			<input type='hidden' name='e-token' value='".e_TOKEN."' />
+			
 			";

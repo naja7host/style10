@@ -94,7 +94,6 @@ if (!defined('e107_INIT')) { exit; }
 						<span class='glyphicon glyphicon-save'></span>
 						<span class='hidden-phone'>".LAN_THEME_ADMIN_SAVE."</span>
 					</button>
-					<input type='hidden' name='e-token' value='".e_TOKEN."' />
 					". $rs->form_close() ;
 					
 	$text .= "	<li class='active'>".LAN_THEME_ADMIN_SIDE_7."</li>
@@ -104,7 +103,7 @@ if (!defined('e107_INIT')) { exit; }
 			<div class='panel panel-primary'>
 				<div class='panel-heading'><i class='icon-star orange'></i> ".  LAN_THEME_ADMIN_12 . LAN_THEME_ADMIN_SIDE_7 ."</div>							
 				<div class='panel-body'>
-					". $rs->form_open("post", e_SELF."?links" ,  'frontpage_news_links', '', 'enctype="multipart/form-data"') ."
+					". $rs->form_open("post", e_SELF."?links" ,  'frontpage_news_submit_links', '', 'enctype="multipart/form-data"') ."
 					".LAN_THEME_LINKS_07."					
 					<div class='radio'>
 						<label>
@@ -121,7 +120,6 @@ if (!defined('e107_INIT')) { exit; }
 						<span class='glyphicon glyphicon-save'></span>
 						<span class='hidden-phone'>".LAN_THEME_ADMIN_SAVE."</span>
 					</button>
-					<input type='hidden' name='e-token' value='".e_TOKEN."' />
 					". $rs->form_close() ."					
 				</div><!-- end panel body -->
 			</div><!-- end panel -->

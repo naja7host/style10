@@ -101,7 +101,4 @@ if (!defined('e107_INIT')) { exit; }
 				<div class='panel-body'>					
 						". nl2br ($raw_response) ."
 				</div><!-- end panel body -->
-			</div><!-- end panel -->			
-			
-			
-			";
+			</div><!-- end panel -->";
