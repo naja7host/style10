@@ -27,7 +27,7 @@ define("LOGOSTYLE", " class='logo' ");
 
 
 	
-$themeversion = "2.7";
+$themeversion = "3.1";
 $themeauthor = "Naja7Host";
 $themedate = "03-12-2014";
 $themeinfo = "e107v7+";
